@@ -1,5 +1,5 @@
 <Solution>
-  <Project Path="Conexion/Conexion.csproj" />
-  <Project Path="Dominio/Dominio.csproj" />
-  <Project Path="TP1-Comercio/TP1-Comercio.csproj" />
+  <Project Path="Conexion/Conexion.csproj" Id="dad9667a-7ac3-4e27-9884-e03703af382a" />
+  <Project Path="Dominio/Dominio.csproj" Id="ca04e517-0363-47e6-8191-b7ff55a1a189" />
+  <Project Path="TP1-Comercio/TP1-Comercio.csproj" Id="c91127a3-3c0b-41d9-ac2d-ee8faf63e13e" />
 </Solution>

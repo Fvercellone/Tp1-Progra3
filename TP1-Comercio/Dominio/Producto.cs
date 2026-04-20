@@ -11,9 +11,9 @@ namespace Dominio
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
-        //cambiar marca despues a una referencia a un clase marca
-        public string Marca { get; set; }
-        public string Categoria { get; set; }
+        //Referencia/Relación con Marca y Categoria
+        public Marca Marca { get; set; }
+        public Categoria Categoria { get; set; }
         public string Imagen { get; set; }
         public decimal Precio { get; set; }
     }

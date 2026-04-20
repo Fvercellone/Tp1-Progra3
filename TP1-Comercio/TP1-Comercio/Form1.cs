@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
-using Conexion;
 
 namespace TP1_Comercio
 {
@@ -33,11 +32,39 @@ namespace TP1_Comercio
             {
                 listaProductos = conexion.listar();
                 DGVProductos.DataSource = listaProductos;
+                ocultarColumnas();
+                cargarImagen(listaProductos[0].Imagen);
             }
             catch (Exception)
             {
 
                 throw;
+            }
+        }
+
+        private void DGVProductos_SelectionChanged(object sender, EventArgs e)
+        {
+            if (DGVProductos.CurrentRow != null)
+            {
+                Producto seleccionado = (Producto)DGVProductos.CurrentRow.DataBoundItem;
+                cargarImagen(seleccionado.Imagen);
+            }
+        }
+
+        private void ocultarColumnas()
+        {
+            DGVProductos.Columns["Imagen"].Visible = false;
+        }
+
+        public void cargarImagen(string imagen)
+        {
+            try
+            {
+                pbxProducto.Load(imagen);
+            }
+            catch (Exception)
+            {
+                pbxProducto.Load("https://capacitacion.fundacionbancopampa.com.ar/wp-content/uploads/2024/09/placeholder-4.png");
             }
         }
     }

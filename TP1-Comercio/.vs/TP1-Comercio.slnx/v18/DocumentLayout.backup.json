@@ -1,26 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\franc\\OneDrive\\Escritorio\\TP Progra 3\\TP-Progra3\\Tp1-Progra3\\TP1-Comercio\\",
+  "WorkspaceRootPath": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C91127A3-3C0B-41D9-AC2D-EE8FAF63E13E}|TP1-Comercio\\TP1-Comercio.csproj|c:\\users\\franc\\onedrive\\escritorio\\tp progra 3\\tp-progra3\\tp1-progra3\\tp1-comercio\\tp1-comercio\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{C91127A3-3C0B-41D9-AC2D-EE8FAF63E13E}|TP1-Comercio\\TP1-Comercio.csproj|C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\tp1-comercio\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{C91127A3-3C0B-41D9-AC2D-EE8FAF63E13E}|TP1-Comercio\\TP1-Comercio.csproj|solutionrelative:tp1-comercio\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C91127A3-3C0B-41D9-AC2D-EE8FAF63E13E}|TP1-Comercio\\TP1-Comercio.csproj|c:\\users\\franc\\onedrive\\escritorio\\tp progra 3\\tp-progra3\\tp1-progra3\\tp1-comercio\\tp1-comercio\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C91127A3-3C0B-41D9-AC2D-EE8FAF63E13E}|TP1-Comercio\\TP1-Comercio.csproj|solutionrelative:tp1-comercio\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAD9667A-7AC3-4E27-9884-E03703AF382A}|Conexion\\Conexion.csproj|c:\\users\\franc\\onedrive\\escritorio\\tp progra 3\\tp-progra3\\tp1-progra3\\tp1-comercio\\conexion\\manjadorproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAD9667A-7AC3-4E27-9884-E03703AF382A}|Conexion\\Conexion.csproj|solutionrelative:conexion\\manjadorproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CA04E517-0363-47E6-8191-B7FF55A1A189}|Dominio\\Dominio.csproj|c:\\users\\franc\\onedrive\\escritorio\\tp progra 3\\tp-progra3\\tp1-progra3\\tp1-comercio\\dominio\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CA04E517-0363-47E6-8191-B7FF55A1A189}|Dominio\\Dominio.csproj|c:\\users\\angel\\onedrive\\documentos\\github\\tp1-progra3\\tp1-comercio\\dominio\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CA04E517-0363-47E6-8191-B7FF55A1A189}|Dominio\\Dominio.csproj|solutionrelative:dominio\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAD9667A-7AC3-4E27-9884-E03703AF382A}|Conexion\\Conexion.csproj|c:\\users\\franc\\onedrive\\escritorio\\tp progra 3\\tp-progra3\\tp1-progra3\\tp1-comercio\\conexion\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAD9667A-7AC3-4E27-9884-E03703AF382A}|Conexion\\Conexion.csproj|solutionrelative:conexion\\conexiondb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA04E517-0363-47E6-8191-B7FF55A1A189}|Dominio\\Dominio.csproj|c:\\users\\angel\\onedrive\\documentos\\github\\tp1-progra3\\tp1-comercio\\dominio\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA04E517-0363-47E6-8191-B7FF55A1A189}|Dominio\\Dominio.csproj|solutionrelative:dominio\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA04E517-0363-47E6-8191-B7FF55A1A189}|Dominio\\Dominio.csproj|c:\\users\\angel\\onedrive\\documentos\\github\\tp1-progra3\\tp1-comercio\\dominio\\marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA04E517-0363-47E6-8191-B7FF55A1A189}|Dominio\\Dominio.csproj|solutionrelative:dominio\\marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAD9667A-7AC3-4E27-9884-E03703AF382A}|Conexion\\Conexion.csproj|c:\\users\\angel\\onedrive\\documentos\\github\\tp1-progra3\\tp1-comercio\\conexion\\manjadorproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAD9667A-7AC3-4E27-9884-E03703AF382A}|Conexion\\Conexion.csproj|solutionrelative:conexion\\manjadorproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAD9667A-7AC3-4E27-9884-E03703AF382A}|Conexion\\Conexion.csproj|c:\\users\\angel\\onedrive\\documentos\\github\\tp1-progra3\\tp1-comercio\\conexion\\manejadormarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAD9667A-7AC3-4E27-9884-E03703AF382A}|Conexion\\Conexion.csproj|solutionrelative:conexion\\manejadormarca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C91127A3-3C0B-41D9-AC2D-EE8FAF63E13E}|TP1-Comercio\\TP1-Comercio.csproj|c:\\users\\angel\\onedrive\\documentos\\github\\tp1-progra3\\tp1-comercio\\tp1-comercio\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C91127A3-3C0B-41D9-AC2D-EE8FAF63E13E}|TP1-Comercio\\TP1-Comercio.csproj|solutionrelative:tp1-comercio\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAD9667A-7AC3-4E27-9884-E03703AF382A}|Conexion\\Conexion.csproj|c:\\users\\angel\\onedrive\\documentos\\github\\tp1-progra3\\tp1-comercio\\conexion\\manejadorcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAD9667A-7AC3-4E27-9884-E03703AF382A}|Conexion\\Conexion.csproj|solutionrelative:conexion\\manejadorcategorias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +42,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\Dominio\\Producto.cs",
+              "RelativeDocumentMoniker": "Dominio\\Producto.cs",
+              "ToolTip": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\Dominio\\Producto.cs",
+              "RelativeToolTip": "Dominio\\Producto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T22:53:57.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\Dominio\\Categoria.cs",
+              "RelativeDocumentMoniker": "Dominio\\Categoria.cs",
+              "ToolTip": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\Dominio\\Categoria.cs",
+              "RelativeToolTip": "Dominio\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T22:50:58.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Marca.cs",
+              "DocumentMoniker": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\Dominio\\Marca.cs",
+              "RelativeDocumentMoniker": "Dominio\\Marca.cs",
+              "ToolTip": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\Dominio\\Marca.cs",
+              "RelativeToolTip": "Dominio\\Marca.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T22:46:53.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "manjadorProductos.cs",
+              "DocumentMoniker": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\Conexion\\manjadorProductos.cs",
+              "RelativeDocumentMoniker": "Conexion\\manjadorProductos.cs",
+              "ToolTip": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\Conexion\\manjadorProductos.cs",
+              "RelativeToolTip": "Conexion\\manjadorProductos.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T22:52:35.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ManejadorMarca.cs",
+              "DocumentMoniker": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\Conexion\\ManejadorMarca.cs",
+              "RelativeDocumentMoniker": "Conexion\\ManejadorMarca.cs",
+              "ToolTip": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\Conexion\\ManejadorMarca.cs",
+              "RelativeToolTip": "Conexion\\ManejadorMarca.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T22:52:17.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\TP Progra 3\\TP-Progra3\\Tp1-Progra3\\TP1-Comercio\\TP1-Comercio\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\TP1-Comercio\\Form1.cs",
               "RelativeDocumentMoniker": "TP1-Comercio\\Form1.cs",
-              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\TP Progra 3\\TP-Progra3\\Tp1-Progra3\\TP1-Comercio\\TP1-Comercio\\Form1.cs",
+              "ToolTip": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\TP1-Comercio\\Form1.cs",
               "RelativeToolTip": "TP1-Comercio\\Form1.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwDgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T22:19:40.872Z",
               "EditorCaption": ""
@@ -49,9 +126,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\TP Progra 3\\TP-Progra3\\Tp1-Progra3\\TP1-Comercio\\TP1-Comercio\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\TP1-Comercio\\Form1.cs",
               "RelativeDocumentMoniker": "TP1-Comercio\\Form1.cs",
-              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\TP Progra 3\\TP-Progra3\\Tp1-Progra3\\TP1-Comercio\\TP1-Comercio\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\TP1-Comercio\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "TP1-Comercio\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-20T21:36:52.603Z",
@@ -59,41 +136,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "manjadorProductos.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\TP Progra 3\\TP-Progra3\\Tp1-Progra3\\TP1-Comercio\\Conexion\\manjadorProductos.cs",
-              "RelativeDocumentMoniker": "Conexion\\manjadorProductos.cs",
-              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\TP Progra 3\\TP-Progra3\\Tp1-Progra3\\TP1-Comercio\\Conexion\\manjadorProductos.cs",
-              "RelativeToolTip": "Conexion\\manjadorProductos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBwAAABFAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "ManejadorCategorias.cs",
+              "DocumentMoniker": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\Conexion\\ManejadorCategorias.cs",
+              "RelativeDocumentMoniker": "Conexion\\ManejadorCategorias.cs",
+              "ToolTip": "C:\\Users\\angel\\OneDrive\\Documentos\\GitHub\\Tp1-Progra3\\TP1-Comercio\\Conexion\\ManejadorCategorias.cs",
+              "RelativeToolTip": "Conexion\\ManejadorCategorias.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T22:00:54.633Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ConexionDB.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\TP Progra 3\\TP-Progra3\\Tp1-Progra3\\TP1-Comercio\\Conexion\\ConexionDB.cs",
-              "RelativeDocumentMoniker": "Conexion\\ConexionDB.cs",
-              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\TP Progra 3\\TP-Progra3\\Tp1-Progra3\\TP1-Comercio\\Conexion\\ConexionDB.cs",
-              "RelativeToolTip": "Conexion\\ConexionDB.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T21:46:25.667Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Producto.cs",
-              "DocumentMoniker": "C:\\Users\\franc\\OneDrive\\Escritorio\\TP Progra 3\\TP-Progra3\\Tp1-Progra3\\TP1-Comercio\\Dominio\\Producto.cs",
-              "RelativeDocumentMoniker": "Dominio\\Producto.cs",
-              "ToolTip": "C:\\Users\\franc\\OneDrive\\Escritorio\\TP Progra 3\\TP-Progra3\\Tp1-Progra3\\TP1-Comercio\\Dominio\\Producto.cs",
-              "RelativeToolTip": "Dominio\\Producto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-20T21:41:14.606Z",
+              "WhenOpened": "2026-04-20T22:58:44.514Z",
               "EditorCaption": ""
             }
           ]

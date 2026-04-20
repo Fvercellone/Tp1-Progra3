@@ -20,11 +20,14 @@ namespace Conexion
                 while (conexion._lector.Read())
                 {
                     Producto aux = new Producto();
+                    Marca auxM = new Marca();
+                    Categoria auxC = new Categoria();
+
                     aux.Id = (int)conexion._lector["Id"];
                     aux.Name = (string)conexion._lector["Nombre"];
                     aux.Description = (string)conexion._lector["Descripcion"];
-                    aux.Marca = (string)conexion._lector["Marca"];
-                    aux.Categoria = (string)conexion._lector["Categoria"];
+                    auxM.idMarca = (int)conexion._lector["Marca"];
+                    auxC.idCategoria = (int)conexion._lector["Categoria"];
                     aux.Imagen = (string)conexion._lector["ImagenUrl"];
                     aux.Precio = (decimal)conexion._lector["Precio"];
                     lista.Add(aux);
