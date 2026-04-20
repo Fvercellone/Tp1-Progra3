@@ -1,0 +1,13 @@
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\Dominio\bin\Debug\Dominio.dll
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\Dominio\bin\Debug\Dominio.pdb
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\Dominio\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\Dominio\obj\Debug\Dominio_MarkupCompile.cache
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\Dominio\obj\Debug\Dominio_MarkupCompile.lref
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\Dominio\obj\Debug\Themes\Generic.baml
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\Dominio\obj\Debug\Dominio.g.resources
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\Dominio\obj\Debug\Dominio.Properties.Resources.resources
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\Dominio\obj\Debug\Dominio.csproj.GenerateResource.cache
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\Dominio\obj\Debug\Dominio.dll
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\Dominio\obj\Debug\Dominio.pdb

@@ -1,0 +1,15 @@
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\bin\Debug\TP1-Comercio.exe.config
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\bin\Debug\TP1-Comercio.exe
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\bin\Debug\TP1-Comercio.pdb
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\bin\Debug\Conexion.dll
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\bin\Debug\Dominio.dll
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\bin\Debug\Conexion.pdb
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\bin\Debug\Dominio.pdb
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\obj\Debug\TP1-Comercio.csproj.AssemblyReference.cache
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\obj\Debug\TP1_Comercio.Form1.resources
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\obj\Debug\TP1_Comercio.Properties.Resources.resources
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\obj\Debug\TP1-Comercio.csproj.GenerateResource.cache
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\obj\Debug\TP1-Comercio.csproj.CoreCompileInputs.cache
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\obj\Debug\TP1-Come.0A0E7258.Up2Date
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\obj\Debug\TP1-Comercio.exe
+C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\obj\Debug\TP1-Comercio.pdb
