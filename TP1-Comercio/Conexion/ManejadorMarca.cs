@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Conexion
 {
-    internal class ManejadorMarca
+    public class ManejadorMarca
     {
-        public List<Marca> listar()
+        public List<Marca> Listar()
         {
             List<Marca> lista = new List<Marca>();
             ConexionDB conexion = new ConexionDB();

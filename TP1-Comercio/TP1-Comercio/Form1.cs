@@ -67,5 +67,11 @@ namespace TP1_Comercio
                 pbxProducto.Load("https://capacitacion.fundacionbancopampa.com.ar/wp-content/uploads/2024/09/placeholder-4.png");
             }
         }
+
+        private void BTAgregarA_Click(object sender, EventArgs e)
+        {
+            AgregarArticulo agregarA = new AgregarArticulo();
+            agregarA.ShowDialog();
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using Dominio;
@@ -15,13 +16,14 @@ namespace Conexion
             ConexionDB conexion = new ConexionDB();
             try
             {
-                conexion.settearConsulta("SELECT P.Id, P.Nombre, P.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, I.ImagenUrl, P.Precio FROM dbo.articulos P LEFT JOIN dbo.imagenes I ON P.Id = I.Idarticulo LEFT JOIN dbo.marcas M ON M.Id = P.IdMarca LEFT JOIN dbo.categorias C ON C.Id = P.IdCategoria");
+                conexion.settearConsulta("SELECT P.Id, P.Codigo, P.Nombre, P.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, I.ImagenUrl, P.Precio FROM dbo.articulos P LEFT JOIN dbo.imagenes I ON P.Id = I.Idarticulo LEFT JOIN dbo.marcas M ON M.Id = P.IdMarca LEFT JOIN dbo.categorias C ON C.Id = P.IdCategoria");
                 conexion.ejecutarLectura();
                 while (conexion._lector.Read())
                 {
                     Producto aux = new Producto();
 
                     aux.Id = (int)conexion._lector["Id"];
+                    aux.Codigo = (string)conexion._lector["Codigo"];
                     aux.Name = (string)conexion._lector["Nombre"];
                     aux.Description = (string)conexion._lector["Descripcion"];
                     aux.Marca = new Marca();
@@ -34,7 +36,7 @@ namespace Conexion
                         aux.Categoria.descripcion = (string)conexion._lector["Categoria"];
                     else
                         aux.Categoria.descripcion = "n/a";
-                    if(conexion._lector["ImagenUrl"] != DBNull.Value)
+                    if (conexion._lector["ImagenUrl"] != DBNull.Value)
                         aux.Imagen = (string)conexion._lector["ImagenUrl"];
                     else
                         aux.Imagen = "n/a";
@@ -52,5 +54,29 @@ namespace Conexion
                 conexion.cerrarConexion();
             }
         }
+
+            public void agregar(Producto nuevo)
+            {
+                ConexionDB conexion = new ConexionDB();
+                try
+                {
+                    conexion.settearConsulta("INSERT INTO dbo.articulos (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) VALUES (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio)");
+                    conexion.agregarParametro("@Codigo", nuevo.Codigo);
+                    conexion.agregarParametro("@Nombre", nuevo.Name);
+                    conexion.agregarParametro("@Descripcion", nuevo.Description);
+                    conexion.agregarParametro("@IdMarca", nuevo.Marca.idMarca);
+                    conexion.agregarParametro("@IdCategoria", nuevo.Categoria.idCategoria);
+                    conexion.agregarParametro("@Precio", nuevo.Precio);
+                    conexion.ejecutarAccion();
+                }
+                catch (Exception ex)
+                {
+                    throw ex;
+                }
+                finally
+                {
+                    conexion.cerrarConexion();
+                }
+            }
     }
 }

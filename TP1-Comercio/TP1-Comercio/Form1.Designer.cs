@@ -30,6 +30,7 @@
         {
             this.DGVProductos = new System.Windows.Forms.DataGridView();
             this.pbxProducto = new System.Windows.Forms.PictureBox();
+            this.BTAgregarA = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProducto)).BeginInit();
             this.SuspendLayout();
@@ -42,23 +43,34 @@
             this.DGVProductos.MultiSelect = false;
             this.DGVProductos.Name = "DGVProductos";
             this.DGVProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVProductos.Size = new System.Drawing.Size(446, 426);
+            this.DGVProductos.Size = new System.Drawing.Size(446, 378);
             this.DGVProductos.TabIndex = 0;
             // 
             // pbxProducto
             // 
             this.pbxProducto.Location = new System.Drawing.Point(464, 12);
             this.pbxProducto.Name = "pbxProducto";
-            this.pbxProducto.Size = new System.Drawing.Size(278, 426);
+            this.pbxProducto.Size = new System.Drawing.Size(278, 378);
             this.pbxProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxProducto.TabIndex = 1;
             this.pbxProducto.TabStop = false;
+            // 
+            // BTAgregarA
+            // 
+            this.BTAgregarA.Location = new System.Drawing.Point(39, 399);
+            this.BTAgregarA.Name = "BTAgregarA";
+            this.BTAgregarA.Size = new System.Drawing.Size(105, 39);
+            this.BTAgregarA.TabIndex = 2;
+            this.BTAgregarA.Text = "Agregar";
+            this.BTAgregarA.UseVisualStyleBackColor = true;
+            this.BTAgregarA.Click += new System.EventHandler(this.BTAgregarA_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BTAgregarA);
             this.Controls.Add(this.pbxProducto);
             this.Controls.Add(this.DGVProductos);
             this.Name = "Form1";
@@ -74,6 +86,7 @@
 
         private System.Windows.Forms.DataGridView DGVProductos;
         private System.Windows.Forms.PictureBox pbxProducto;
+        private System.Windows.Forms.Button BTAgregarA;
     }
 }
 

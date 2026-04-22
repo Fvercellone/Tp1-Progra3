@@ -18,7 +18,8 @@ namespace Conexion
 
         public ConexionDB()
         {
-            _Conexion = new SqlConnection("server=localhost,14330; database=CATALOGO_P3_DB; user=sa; password=Miriam27/10");
+            //_Conexion = new SqlConnection("server=localhost,14330; database=CATALOGO_P3_DB; user=sa; password=Miriam27/10");
+            _Conexion = new SqlConnection("server=.\\SQLEXPRESS; database=CATALOGO_P3_DB; integrated security=true");
             _Comando = new SqlCommand();
             _Comando.Connection = _Conexion;
         }
@@ -53,6 +54,11 @@ namespace Conexion
             {
                 throw ex;
             }
+        }
+
+        public void agregarParametro(string nombre, object valor)
+        {
+            _Comando.Parameters.AddWithValue(nombre, valor);
         }
 
         public void cerrarConexion()
