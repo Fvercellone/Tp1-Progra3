@@ -16,8 +16,7 @@ namespace Conexion
             ConexionDB conexion = new ConexionDB();
             try
             {
-                // Include the IdMarca and IdCategoria in the query so they can be mapped to the Producto's Marca/Categoria objects
-                conexion.settearConsulta("SELECT P.Id, P.Codigo, P.Nombre, P.Descripcion, P.IdMarca, P.IdCategoria, M.Descripcion as Marca, C.Descripcion as Categoria, I.ImagenUrl, P.Precio FROM dbo.articulos P LEFT JOIN dbo.imagenes I ON P.Id = I.Idarticulo LEFT JOIN dbo.marcas M ON M.Id = P.IdMarca LEFT JOIN dbo.categorias C ON C.Id = P.IdCategoria");
+                conexion.settearConsulta("SELECT P.Id, P.Codigo, P.Nombre, P.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, I.ImagenUrl, P.Precio FROM dbo.articulos P LEFT JOIN dbo.imagenes I ON P.Id = I.Idarticulo LEFT JOIN dbo.marcas M ON M.Id = P.IdMarca LEFT JOIN dbo.categorias C ON C.Id = P.IdCategoria");
                 conexion.ejecutarLectura();
                 while (conexion._lector.Read())
                 {
@@ -28,21 +27,12 @@ namespace Conexion
                     aux.Name = (string)conexion._lector["Nombre"];
                     aux.Description = (string)conexion._lector["Descripcion"];
                     aux.Marca = new Marca();
-                    if (conexion._lector["IdMarca"] != DBNull.Value)
-                        aux.Marca.idMarca = (int)conexion._lector["IdMarca"];
-                    else
-                        aux.Marca.idMarca = 0;
-                    if (conexion._lector["Marca"] != DBNull.Value)
+                    if (conexion._lector["marca"] != DBNull.Value)
                         aux.Marca.descripcion = (string)conexion._lector["Marca"];
                     else
                         aux.Marca.descripcion = "n/a";
-
                     aux.Categoria = new Categoria();
-                    if (conexion._lector["IdCategoria"] != DBNull.Value)
-                        aux.Categoria.idCategoria = (int)conexion._lector["IdCategoria"];
-                    else
-                        aux.Categoria.idCategoria = 0;
-                    if (conexion._lector["Categoria"] != DBNull.Value)
+                    if (conexion._lector["categoria"] != DBNull.Value)
                         aux.Categoria.descripcion = (string)conexion._lector["Categoria"];
                     else
                         aux.Categoria.descripcion = "n/a";
@@ -95,8 +85,7 @@ namespace Conexion
                 ConexionDB conexion = new ConexionDB();
             try
             {
-                conexion.settearConsulta("BEGIN TRANSACTION; UPDATE ARTICULOS SET Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, Precio = @Precio WHERE Id = @Id; UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE IdArticulo = @Id; COMMIT");
-                conexion.agregarParametro("@Id", producto.Id);
+                conexion.settearConsulta("UPDATE dbo.articulos SET Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, Precio = @Precio WHERE Id = @Id; UPDATE dbo.imagenes SET ImagenUrl = @ImagenUrl WHERE IdArticulo = @Id;");
                 conexion.agregarParametro("@Codigo", producto.Codigo);
                 conexion.agregarParametro("@Nombre", producto.Name);
                 conexion.agregarParametro("@Descripcion", producto.Description);
@@ -104,6 +93,7 @@ namespace Conexion
                 conexion.agregarParametro("@IdCategoria", producto.Categoria.idCategoria);
                 conexion.agregarParametro("@ImagenUrl", producto.Imagen);
                 conexion.agregarParametro("@Precio", producto.Precio);
+                conexion.agregarParametro("@Id", producto.Id);
                 conexion.ejecutarAccion();
             }
             catch (Exception ex)

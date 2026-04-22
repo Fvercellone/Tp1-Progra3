@@ -31,6 +31,7 @@
             this.DGVProductos = new System.Windows.Forms.DataGridView();
             this.pbxProducto = new System.Windows.Forms.PictureBox();
             this.BTAgregarA = new System.Windows.Forms.Button();
+            this.BTNModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProducto)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +58,7 @@
             // 
             // BTAgregarA
             // 
-            this.BTAgregarA.Location = new System.Drawing.Point(39, 399);
+            this.BTAgregarA.Location = new System.Drawing.Point(12, 399);
             this.BTAgregarA.Name = "BTAgregarA";
             this.BTAgregarA.Size = new System.Drawing.Size(105, 39);
             this.BTAgregarA.TabIndex = 2;
@@ -65,11 +66,22 @@
             this.BTAgregarA.UseVisualStyleBackColor = true;
             this.BTAgregarA.Click += new System.EventHandler(this.BTAgregarA_Click);
             // 
+            // BTNModificar
+            // 
+            this.BTNModificar.Location = new System.Drawing.Point(353, 399);
+            this.BTNModificar.Name = "BTNModificar";
+            this.BTNModificar.Size = new System.Drawing.Size(105, 39);
+            this.BTNModificar.TabIndex = 3;
+            this.BTNModificar.Text = "Modificar";
+            this.BTNModificar.UseVisualStyleBackColor = true;
+            this.BTNModificar.Click += new System.EventHandler(this.BTNModificar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BTNModificar);
             this.Controls.Add(this.BTAgregarA);
             this.Controls.Add(this.pbxProducto);
             this.Controls.Add(this.DGVProductos);
@@ -87,6 +99,7 @@
         private System.Windows.Forms.DataGridView DGVProductos;
         private System.Windows.Forms.PictureBox pbxProducto;
         private System.Windows.Forms.Button BTAgregarA;
+        private System.Windows.Forms.Button BTNModificar;
     }
 }
 

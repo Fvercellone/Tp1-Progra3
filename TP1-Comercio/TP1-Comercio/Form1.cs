@@ -71,7 +71,18 @@ namespace TP1_Comercio
         private void BTAgregarA_Click(object sender, EventArgs e)
         {
             AgregarArticulo agregarA = new AgregarArticulo();
-            agregarA.ShowDialog();
+            agregarA.ShowDialog();  
+            cargar();
+        }
+
+        private void BTNModificar_Click(object sender, EventArgs e)
+        {
+            Producto Seleccionado;
+            Seleccionado = (Producto)DGVProductos.CurrentRow.DataBoundItem;
+
+            AgregarArticulo modificar = new AgregarArticulo(Seleccionado);
+            modificar.ShowDialog();
+            cargar();
         }
     }
 }

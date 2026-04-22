@@ -42,6 +42,11 @@
             this.TBPrecio = new System.Windows.Forms.TextBox();
             this.CBMarca = new System.Windows.Forms.ComboBox();
             this.CBCategoria = new System.Windows.Forms.ComboBox();
+            this.PBNuevoProducto = new System.Windows.Forms.PictureBox();
+            this.LBLFoto = new System.Windows.Forms.Label();
+            this.TXBFoto = new System.Windows.Forms.TextBox();
+            this.ImagenArchivo = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.PBNuevoProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // LBCodigo
@@ -121,7 +126,7 @@
             // 
             // BTAceptar
             // 
-            this.BTAceptar.Location = new System.Drawing.Point(72, 312);
+            this.BTAceptar.Location = new System.Drawing.Point(72, 217);
             this.BTAceptar.Name = "BTAceptar";
             this.BTAceptar.Size = new System.Drawing.Size(75, 23);
             this.BTAceptar.TabIndex = 13;
@@ -131,7 +136,7 @@
             // 
             // BTCancelar
             // 
-            this.BTCancelar.Location = new System.Drawing.Point(234, 312);
+            this.BTCancelar.Location = new System.Drawing.Point(187, 217);
             this.BTCancelar.Name = "BTCancelar";
             this.BTCancelar.Size = new System.Drawing.Size(75, 23);
             this.BTCancelar.TabIndex = 14;
@@ -141,7 +146,7 @@
             // 
             // TBPrecio
             // 
-            this.TBPrecio.Location = new System.Drawing.Point(141, 164);
+            this.TBPrecio.Location = new System.Drawing.Point(141, 160);
             this.TBPrecio.Name = "TBPrecio";
             this.TBPrecio.Size = new System.Drawing.Size(100, 20);
             this.TBPrecio.TabIndex = 15;
@@ -164,11 +169,51 @@
             this.CBCategoria.Size = new System.Drawing.Size(121, 21);
             this.CBCategoria.TabIndex = 17;
             // 
+            // PBNuevoProducto
+            // 
+            this.PBNuevoProducto.Location = new System.Drawing.Point(292, 33);
+            this.PBNuevoProducto.Name = "PBNuevoProducto";
+            this.PBNuevoProducto.Size = new System.Drawing.Size(235, 210);
+            this.PBNuevoProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PBNuevoProducto.TabIndex = 18;
+            this.PBNuevoProducto.TabStop = false;
+            // 
+            // LBLFoto
+            // 
+            this.LBLFoto.AutoSize = true;
+            this.LBLFoto.Location = new System.Drawing.Point(71, 191);
+            this.LBLFoto.Name = "LBLFoto";
+            this.LBLFoto.Size = new System.Drawing.Size(28, 13);
+            this.LBLFoto.TabIndex = 19;
+            this.LBLFoto.Text = "Foto";
+            // 
+            // TXBFoto
+            // 
+            this.TXBFoto.Location = new System.Drawing.Point(141, 191);
+            this.TXBFoto.Name = "TXBFoto";
+            this.TXBFoto.Size = new System.Drawing.Size(100, 20);
+            this.TXBFoto.TabIndex = 20;
+            this.TXBFoto.Leave += new System.EventHandler(this.TXBFoto_Leave);
+            // 
+            // ImagenArchivo
+            // 
+            this.ImagenArchivo.Location = new System.Drawing.Point(247, 191);
+            this.ImagenArchivo.Name = "ImagenArchivo";
+            this.ImagenArchivo.Size = new System.Drawing.Size(23, 23);
+            this.ImagenArchivo.TabIndex = 21;
+            this.ImagenArchivo.Text = "+";
+            this.ImagenArchivo.UseVisualStyleBackColor = true;
+            this.ImagenArchivo.Click += new System.EventHandler(this.ImagenArchivo_Click);
+            // 
             // AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 383);
+            this.ClientSize = new System.Drawing.Size(539, 263);
+            this.Controls.Add(this.ImagenArchivo);
+            this.Controls.Add(this.TXBFoto);
+            this.Controls.Add(this.LBLFoto);
+            this.Controls.Add(this.PBNuevoProducto);
             this.Controls.Add(this.CBCategoria);
             this.Controls.Add(this.CBMarca);
             this.Controls.Add(this.TBPrecio);
@@ -186,6 +231,7 @@
             this.Name = "AgregarArticulo";
             this.Text = "AgregarArticulo";
             this.Load += new System.EventHandler(this.AgregarArticulo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.PBNuevoProducto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,5 +253,9 @@
         private System.Windows.Forms.TextBox TBPrecio;
         private System.Windows.Forms.ComboBox CBMarca;
         private System.Windows.Forms.ComboBox CBCategoria;
+        private System.Windows.Forms.PictureBox PBNuevoProducto;
+        private System.Windows.Forms.Label LBLFoto;
+        private System.Windows.Forms.TextBox TXBFoto;
+        private System.Windows.Forms.Button ImagenArchivo;
     }
 }

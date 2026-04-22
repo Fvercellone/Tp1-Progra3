@@ -37,28 +37,29 @@ namespace TP1_Comercio
 
         private void BTAceptar_Click(object sender, EventArgs e)
         {
+            Producto nuevo = new Producto();
             manjadorProductos conexion = new manjadorProductos();
             try
             {
-                if (producto == null)
+                if(producto == null)
                     producto = new Producto();
 
-                producto.Codigo = TBCodigo.Text;
-                producto.Name = TBNombre.Text;
-                producto.Description = TBDescripcion.Text;
-                producto.Precio = decimal.Parse(TBPrecio.Text);
-                producto.Marca = (Marca)CBMarca.SelectedItem;
-                producto.Categoria = (Categoria)CBCategoria.SelectedItem;
-                producto.Imagen = TXBFoto.Text;
+                nuevo.Codigo = TBCodigo.Text;
+                nuevo.Name = TBNombre.Text;
+                nuevo.Description = TBDescripcion.Text;
+                nuevo.Precio = decimal.Parse(TBPrecio.Text);
+                nuevo.Marca = (Marca)CBMarca.SelectedItem;
+                nuevo.Categoria = (Categoria)CBCategoria.SelectedItem;
+                nuevo.Imagen = TXBFoto.Text;
 
-                if (producto.Id != 0)
+                if(producto.Id != 0)
                 {
-                    conexion.modificar(producto);
+                    conexion.modificar(nuevo);
                     MessageBox.Show("Producto modificado con éxito");
                 }
                 else
                 {
-                conexion.agregar(producto);
+                conexion.agregar(nuevo);
                 MessageBox.Show("Producto agregado con éxito");
                 }
 
