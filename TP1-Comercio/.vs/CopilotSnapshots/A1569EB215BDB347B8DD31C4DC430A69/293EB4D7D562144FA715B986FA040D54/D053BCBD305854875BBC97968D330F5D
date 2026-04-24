@@ -1,0 +1,75 @@
+﻿using Conexion;
+using Dominio;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace TP1_Comercio
+{
+    public partial class VerDetalleProducto : Form
+    {
+        private Producto producto;
+
+        public VerDetalleProducto(Producto producto)    
+        {
+            InitializeComponent();
+            this.producto = producto;
+        }
+
+        private void VerDetalleProducto_Load(object sender, EventArgs e)
+        {
+            ManejadorMarca marca = new ManejadorMarca();
+            ManejadorCategorias categoria = new ManejadorCategorias();
+            manjadorProductos Conexion = new manjadorProductos();
+
+            try
+            {
+                // Si se pretende mostrar los detalles del producto en los controles,
+                // hay que leer desde la instancia 'producto' y asignar a los TextBoxes/ComboBoxes.
+                
+                    TBCodigo.Text = producto.Codigo;
+                    TBNombre.Text = producto.Name;
+                    TBDescripcion.Text = producto.Description;
+                    TBPrecio.Text = producto.Precio.ToString();
+                    CBMarca.SelectedItem = producto.Marca;
+                    CBCategoria.SelectedItem = producto.Categoria;
+                    TXBFoto.Text = producto.Imagen;
+                    cargarImagen(producto.Imagen);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+
+        public void cargarDetalle(Producto producto)
+        {
+            producto.Codigo = TBCodigo.Text;
+            producto.Name = TBNombre.Text;
+            producto.Description = TBDescripcion.Text;
+            producto.Precio = decimal.Parse(TBPrecio.Text);
+            producto.Marca = (Marca)CBMarca.SelectedItem;
+            producto.Categoria = (Categoria)CBCategoria.SelectedItem;
+            producto.Imagen = TXBFoto.Text;
+        }
+
+        public void cargarImagen(string imagen)
+        {
+            try
+            {
+                PBNuevoProducto.Load(imagen);
+            }
+            catch (Exception)
+            {
+                PBNuevoProducto.Load("https://capacitacion.fundacionbancopampa.com.ar/wp-content/uploads/2024/09/placeholder-4.png");
+            }
+        }
+    }
+}

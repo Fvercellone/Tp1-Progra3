@@ -105,5 +105,15 @@ namespace TP1_Comercio
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void BTVerDetalle_Click(object sender, EventArgs e)
+        {
+            Producto Seleccionado;
+            Seleccionado = (Producto)DGVProductos.CurrentRow.DataBoundItem;
+
+            VerDetalleProducto detalle = new VerDetalleProducto(Seleccionado);
+            detalle.ShowDialog(); 
+            cargar();
+        }
     }
 }

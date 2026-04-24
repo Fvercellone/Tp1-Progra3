@@ -33,6 +33,7 @@
             this.BTAgregarA = new System.Windows.Forms.Button();
             this.BTNModificar = new System.Windows.Forms.Button();
             this.BTEliminar = new System.Windows.Forms.Button();
+            this.BTVerDetalle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProducto)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +70,7 @@
             // 
             // BTNModificar
             // 
-            this.BTNModificar.Location = new System.Drawing.Point(353, 399);
+            this.BTNModificar.Location = new System.Drawing.Point(234, 399);
             this.BTNModificar.Name = "BTNModificar";
             this.BTNModificar.Size = new System.Drawing.Size(105, 39);
             this.BTNModificar.TabIndex = 3;
@@ -79,7 +80,7 @@
             // 
             // BTEliminar
             // 
-            this.BTEliminar.Location = new System.Drawing.Point(175, 399);
+            this.BTEliminar.Location = new System.Drawing.Point(123, 399);
             this.BTEliminar.Name = "BTEliminar";
             this.BTEliminar.Size = new System.Drawing.Size(105, 39);
             this.BTEliminar.TabIndex = 4;
@@ -87,11 +88,22 @@
             this.BTEliminar.UseVisualStyleBackColor = true;
             this.BTEliminar.Click += new System.EventHandler(this.BTEliminar_Click);
             // 
+            // BTVerDetalle
+            // 
+            this.BTVerDetalle.Location = new System.Drawing.Point(345, 399);
+            this.BTVerDetalle.Name = "BTVerDetalle";
+            this.BTVerDetalle.Size = new System.Drawing.Size(105, 39);
+            this.BTVerDetalle.TabIndex = 5;
+            this.BTVerDetalle.Text = "Ver Detalle";
+            this.BTVerDetalle.UseVisualStyleBackColor = true;
+            this.BTVerDetalle.Click += new System.EventHandler(this.BTVerDetalle_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BTVerDetalle);
             this.Controls.Add(this.BTEliminar);
             this.Controls.Add(this.BTNModificar);
             this.Controls.Add(this.BTAgregarA);
@@ -113,6 +125,7 @@
         private System.Windows.Forms.Button BTAgregarA;
         private System.Windows.Forms.Button BTNModificar;
         private System.Windows.Forms.Button BTEliminar;
+        private System.Windows.Forms.Button BTVerDetalle;
     }
 }
 
