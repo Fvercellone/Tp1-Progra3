@@ -84,5 +84,26 @@ namespace TP1_Comercio
             modificar.ShowDialog();
             cargar();
         }
+
+        private void BTEliminar_Click(object sender, EventArgs e)
+        {
+            manjadorProductos conexion = new manjadorProductos();
+            Producto Seleccionado;
+            try
+            {
+                DialogResult result = MessageBox.Show("Desea eliminar el producto seleccionado?", "Producto Eliminado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    Seleccionado = (Producto)DGVProductos.CurrentRow.DataBoundItem;
+                    conexion.Eliminar(Seleccionado.Id);
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
 }

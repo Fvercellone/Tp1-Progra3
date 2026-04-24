@@ -32,6 +32,7 @@
             this.pbxProducto = new System.Windows.Forms.PictureBox();
             this.BTAgregarA = new System.Windows.Forms.Button();
             this.BTNModificar = new System.Windows.Forms.Button();
+            this.BTEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProducto)).BeginInit();
             this.SuspendLayout();
@@ -76,11 +77,22 @@
             this.BTNModificar.UseVisualStyleBackColor = true;
             this.BTNModificar.Click += new System.EventHandler(this.BTNModificar_Click);
             // 
+            // BTEliminar
+            // 
+            this.BTEliminar.Location = new System.Drawing.Point(175, 399);
+            this.BTEliminar.Name = "BTEliminar";
+            this.BTEliminar.Size = new System.Drawing.Size(105, 39);
+            this.BTEliminar.TabIndex = 4;
+            this.BTEliminar.Text = "Eliminar";
+            this.BTEliminar.UseVisualStyleBackColor = true;
+            this.BTEliminar.Click += new System.EventHandler(this.BTEliminar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BTEliminar);
             this.Controls.Add(this.BTNModificar);
             this.Controls.Add(this.BTAgregarA);
             this.Controls.Add(this.pbxProducto);
@@ -100,6 +112,7 @@
         private System.Windows.Forms.PictureBox pbxProducto;
         private System.Windows.Forms.Button BTAgregarA;
         private System.Windows.Forms.Button BTNModificar;
+        private System.Windows.Forms.Button BTEliminar;
     }
 }
 

@@ -65,34 +65,34 @@ namespace Conexion
             }
         }
 
-            public void agregar(Producto nuevo)
+        public void agregar(Producto nuevo)
+        {
+            ConexionDB conexion = new ConexionDB();
+            try
             {
-                ConexionDB conexion = new ConexionDB();
-                try
-                {
-                    conexion.settearConsulta("INSERT INTO dbo.articulos (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) VALUES (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio); DECLARE @IdArticulo INT = SCOPE_IDENTITY(); INSERT INTO dbo.imagenes (IdArticulo, ImagenUrl) VALUES (@IdArticulo, @ImagenUrl);");
-                    conexion.agregarParametro("@Codigo", nuevo.Codigo);
-                    conexion.agregarParametro("@Nombre", nuevo.Name);
-                    conexion.agregarParametro("@Descripcion", nuevo.Description);
-                    conexion.agregarParametro("@IdMarca", nuevo.Marca.idMarca);
-                    conexion.agregarParametro("@IdCategoria", nuevo.Categoria.idCategoria);
-                    conexion.agregarParametro("@ImagenUrl", nuevo.Imagen);
-                    conexion.agregarParametro("@Precio", nuevo.Precio);
-                    conexion.ejecutarAccion();
-                }
-                catch (Exception ex)
-                {
-                    throw ex;
-                }
-                finally
-                {
-                    conexion.cerrarConexion();
-                }
+                conexion.settearConsulta("INSERT INTO dbo.articulos (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) VALUES (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio); DECLARE @IdArticulo INT = SCOPE_IDENTITY(); INSERT INTO dbo.imagenes (IdArticulo, ImagenUrl) VALUES (@IdArticulo, @ImagenUrl);");
+                conexion.agregarParametro("@Codigo", nuevo.Codigo);
+                conexion.agregarParametro("@Nombre", nuevo.Name);
+                conexion.agregarParametro("@Descripcion", nuevo.Description);
+                conexion.agregarParametro("@IdMarca", nuevo.Marca.idMarca);
+                conexion.agregarParametro("@IdCategoria", nuevo.Categoria.idCategoria);
+                conexion.agregarParametro("@ImagenUrl", nuevo.Imagen);
+                conexion.agregarParametro("@Precio", nuevo.Precio);
+                conexion.ejecutarAccion();
             }
-
-            public void modificar(Producto producto)
+            catch (Exception ex)
             {
-                ConexionDB conexion = new ConexionDB();
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+            }
+        }
+
+        public void modificar(Producto producto)
+        {
+            ConexionDB conexion = new ConexionDB();
             try
             {
                 conexion.settearConsulta("BEGIN TRANSACTION; UPDATE ARTICULOS SET Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, Precio = @Precio WHERE Id = @Id; UPDATE IMAGENES SET ImagenUrl = @ImagenUrl WHERE IdArticulo = @Id; COMMIT");
@@ -114,6 +114,25 @@ namespace Conexion
             {
                 conexion.cerrarConexion();
             }
-          }
+        }
+
+        public void Eliminar(int id)
+        {
+                ConexionDB conexion = new ConexionDB();
+            try
+            {
+                conexion.settearConsulta("DELETE FROM ARTICULOS WHERE Id = @Id");
+                conexion.agregarParametro("@Id", id);
+                conexion.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+            }
+        }
     }
 }
