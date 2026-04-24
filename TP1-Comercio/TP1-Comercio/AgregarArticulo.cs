@@ -46,7 +46,7 @@ namespace TP1_Comercio
                 producto.Codigo = TBCodigo.Text;
                 producto.Name = TBNombre.Text;
                 producto.Description = TBDescripcion.Text;
-                producto.Precio = decimal.Parse(TBPrecio.Text);
+                producto.Precio = decimal.Parse(NUDPrecio.Text);
                 producto.Marca = (Marca)CBMarca.SelectedItem;
                 producto.Categoria = (Categoria)CBCategoria.SelectedItem;
                 producto.Imagen = TXBFoto.Text;
@@ -67,9 +67,9 @@ namespace TP1_Comercio
 
                 Close();
             }
-            catch (Exception ex)
+            catch (FormatException)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("El unico campo que puede quedar vacio es el de fotos");
             }
         }
 
@@ -93,7 +93,7 @@ namespace TP1_Comercio
                     TBCodigo.Text = producto.Codigo;
                     TBNombre.Text = producto.Name;
                     TBDescripcion.Text = producto.Description;
-                    TBPrecio.Text = producto.Precio.ToString();
+                    NUDPrecio.Text = producto.Precio.ToString();
                     CBMarca.SelectedValue = producto.Marca.idMarca;
                     CBCategoria.SelectedValue = producto.Categoria.idCategoria;
                     TXBFoto.Text = producto.Imagen;
@@ -101,10 +101,11 @@ namespace TP1_Comercio
 
                 }
             }
-            catch (Exception ex)
+            catch (FormatException)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("El unico campo que puede quedar vacio es el de fotos");
             }
+
         }
 
         private void TXBFoto_Leave(object sender, EventArgs e)
@@ -135,6 +136,9 @@ namespace TP1_Comercio
             }
         }
 
-
+        private void TBCodigo_TextChanged(object sender, EventArgs e)
+        {
+            BTAceptar.Enabled = !string.IsNullOrEmpty(TBCodigo.Text) && !string.IsNullOrEmpty(TBNombre.Text) && NUDPrecio.Value > 0;
+        }
     }
 }

@@ -23,6 +23,11 @@ namespace TP1_Comercio
         private void Form1_Load(object sender, EventArgs e)
         {
             cargar();
+
+            CBOFiltros.Items.Add("Nombre");
+            CBOFiltros.Items.Add("Marca");
+            CBOFiltros.Items.Add("Categoria");
+            CBOFiltros.SelectedIndex = 0;
         }
 
         private void cargar()
@@ -33,7 +38,7 @@ namespace TP1_Comercio
                 listaProductos = conexion.listar();
                 DGVProductos.DataSource = listaProductos;
                 ocultarColumnas();
-                cargarImagen(listaProductos[0].Imagen);
+                CargarImagen(listaProductos[0].Imagen);
             }
             catch (Exception)
             {
@@ -47,16 +52,17 @@ namespace TP1_Comercio
             if (DGVProductos.CurrentRow != null)
             {
                 Producto seleccionado = (Producto)DGVProductos.CurrentRow.DataBoundItem;
-                cargarImagen(seleccionado.Imagen);
+                CargarImagen(seleccionado.Imagen);
             }
         }
 
         private void ocultarColumnas()
         {
             DGVProductos.Columns["Imagen"].Visible = false;
+            DGVProductos.Columns["Id"].Visible = false;
         }
 
-        public void cargarImagen(string imagen)
+        public void CargarImagen(string imagen)
         {
             try
             {
@@ -114,6 +120,50 @@ namespace TP1_Comercio
             VerDetalleProducto detalle = new VerDetalleProducto(Seleccionado);
             detalle.ShowDialog(); 
             cargar();
+        }
+
+        private void TXBBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            List<Producto> listaFiltrada;
+            string Filtro = CBOFiltros.SelectedItem.ToString();
+
+            if (Filtro == "Nombre" && TXBBusqueda.Text != "")
+            {
+                listaFiltrada = listaProductos.FindAll(x => x.Name.ToUpper().Contains(TXBBusqueda.Text.ToUpper()));
+            }
+            else if (Filtro == "Categoria" && TXBBusqueda.Text != "")
+            {
+                listaFiltrada = listaProductos.FindAll(x => x.Categoria.descripcion.ToUpper().Contains(TXBBusqueda.Text.ToUpper()));
+            }
+            else if (Filtro == "Marca" && TXBBusqueda.Text != "")
+            {
+                listaFiltrada = listaProductos.FindAll(x => x.Marca.descripcion.ToUpper().Contains(TXBBusqueda.Text.ToUpper()));
+            }
+            else
+            {
+                listaFiltrada = listaProductos;
+            }
+
+            DGVProductos.DataSource = null;
+            DGVProductos.DataSource = listaFiltrada;
+            ocultarColumnas();
+        }
+
+        private void CBOFiltros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = CBOFiltros.SelectedItem.ToString();
+            if(opcion == "Nombre")
+            {
+                string seleccionado = CBOFiltros.SelectedItem.ToString();
+            }
+            else if(opcion == "Categoria")
+            {
+                string seleccionado = CBOFiltros.SelectedItem.ToString();
+            }
+            else
+            {
+                string seleccionado = CBOFiltros.SelectedItem.ToString();
+            }
         }
     }
 }

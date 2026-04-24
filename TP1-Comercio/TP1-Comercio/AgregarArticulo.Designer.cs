@@ -39,14 +39,15 @@
             this.LBPrecio = new System.Windows.Forms.Label();
             this.BTAceptar = new System.Windows.Forms.Button();
             this.BTCancelar = new System.Windows.Forms.Button();
-            this.TBPrecio = new System.Windows.Forms.TextBox();
             this.CBMarca = new System.Windows.Forms.ComboBox();
             this.CBCategoria = new System.Windows.Forms.ComboBox();
             this.PBNuevoProducto = new System.Windows.Forms.PictureBox();
             this.LBLFoto = new System.Windows.Forms.Label();
             this.TXBFoto = new System.Windows.Forms.TextBox();
             this.ImagenArchivo = new System.Windows.Forms.Button();
+            this.NUDPrecio = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.PBNuevoProducto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDPrecio)).BeginInit();
             this.SuspendLayout();
             // 
             // LBCodigo
@@ -64,6 +65,7 @@
             this.TBCodigo.Name = "TBCodigo";
             this.TBCodigo.Size = new System.Drawing.Size(100, 20);
             this.TBCodigo.TabIndex = 1;
+            this.TBCodigo.TextChanged += new System.EventHandler(this.TBCodigo_TextChanged);
             // 
             // TBNombre
             // 
@@ -71,6 +73,7 @@
             this.TBNombre.Name = "TBNombre";
             this.TBNombre.Size = new System.Drawing.Size(100, 20);
             this.TBNombre.TabIndex = 3;
+            this.TBNombre.TextChanged += new System.EventHandler(this.TBCodigo_TextChanged);
             // 
             // LBNombre
             // 
@@ -126,6 +129,7 @@
             // 
             // BTAceptar
             // 
+            this.BTAceptar.Enabled = false;
             this.BTAceptar.Location = new System.Drawing.Point(72, 217);
             this.BTAceptar.Name = "BTAceptar";
             this.BTAceptar.Size = new System.Drawing.Size(75, 23);
@@ -143,13 +147,6 @@
             this.BTCancelar.Text = "Cancelar";
             this.BTCancelar.UseVisualStyleBackColor = true;
             this.BTCancelar.Click += new System.EventHandler(this.BTCancelar_Click);
-            // 
-            // TBPrecio
-            // 
-            this.TBPrecio.Location = new System.Drawing.Point(141, 160);
-            this.TBPrecio.Name = "TBPrecio";
-            this.TBPrecio.Size = new System.Drawing.Size(100, 20);
-            this.TBPrecio.TabIndex = 15;
             // 
             // CBMarca
             // 
@@ -205,18 +202,41 @@
             this.ImagenArchivo.UseVisualStyleBackColor = true;
             this.ImagenArchivo.Click += new System.EventHandler(this.ImagenArchivo_Click);
             // 
+            // NUDPrecio
+            // 
+            this.NUDPrecio.Location = new System.Drawing.Point(141, 164);
+            this.NUDPrecio.Maximum = new decimal(new int[] {
+            268435455,
+            1042612833,
+            542101086,
+            0});
+            this.NUDPrecio.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUDPrecio.Name = "NUDPrecio";
+            this.NUDPrecio.Size = new System.Drawing.Size(120, 20);
+            this.NUDPrecio.TabIndex = 22;
+            this.NUDPrecio.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NUDPrecio.ValueChanged += new System.EventHandler(this.TBCodigo_TextChanged);
+            // 
             // AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(539, 263);
+            this.Controls.Add(this.NUDPrecio);
             this.Controls.Add(this.ImagenArchivo);
             this.Controls.Add(this.TXBFoto);
             this.Controls.Add(this.LBLFoto);
             this.Controls.Add(this.PBNuevoProducto);
             this.Controls.Add(this.CBCategoria);
             this.Controls.Add(this.CBMarca);
-            this.Controls.Add(this.TBPrecio);
             this.Controls.Add(this.BTCancelar);
             this.Controls.Add(this.BTAceptar);
             this.Controls.Add(this.LBPrecio);
@@ -232,6 +252,7 @@
             this.Text = "AgregarArticulo";
             this.Load += new System.EventHandler(this.AgregarArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PBNuevoProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDPrecio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,12 +271,12 @@
         private System.Windows.Forms.Label LBPrecio;
         private System.Windows.Forms.Button BTAceptar;
         private System.Windows.Forms.Button BTCancelar;
-        private System.Windows.Forms.TextBox TBPrecio;
         private System.Windows.Forms.ComboBox CBMarca;
         private System.Windows.Forms.ComboBox CBCategoria;
         private System.Windows.Forms.PictureBox PBNuevoProducto;
         private System.Windows.Forms.Label LBLFoto;
         private System.Windows.Forms.TextBox TXBFoto;
         private System.Windows.Forms.Button ImagenArchivo;
+        private System.Windows.Forms.NumericUpDown NUDPrecio;
     }
 }

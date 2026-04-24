@@ -34,6 +34,8 @@
             this.BTNModificar = new System.Windows.Forms.Button();
             this.BTEliminar = new System.Windows.Forms.Button();
             this.BTVerDetalle = new System.Windows.Forms.Button();
+            this.TXBBusqueda = new System.Windows.Forms.TextBox();
+            this.CBOFiltros = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProducto)).BeginInit();
             this.SuspendLayout();
@@ -46,8 +48,9 @@
             this.DGVProductos.MultiSelect = false;
             this.DGVProductos.Name = "DGVProductos";
             this.DGVProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVProductos.Size = new System.Drawing.Size(446, 378);
+            this.DGVProductos.Size = new System.Drawing.Size(446, 352);
             this.DGVProductos.TabIndex = 0;
+            this.DGVProductos.SelectionChanged += new System.EventHandler(this.DGVProductos_SelectionChanged);
             // 
             // pbxProducto
             // 
@@ -98,11 +101,31 @@
             this.BTVerDetalle.UseVisualStyleBackColor = true;
             this.BTVerDetalle.Click += new System.EventHandler(this.BTVerDetalle_Click);
             // 
+            // TXBBusqueda
+            // 
+            this.TXBBusqueda.Location = new System.Drawing.Point(140, 370);
+            this.TXBBusqueda.Name = "TXBBusqueda";
+            this.TXBBusqueda.Size = new System.Drawing.Size(310, 20);
+            this.TXBBusqueda.TabIndex = 6;
+            this.TXBBusqueda.TextChanged += new System.EventHandler(this.TXBBusqueda_TextChanged);
+            // 
+            // CBOFiltros
+            // 
+            this.CBOFiltros.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBOFiltros.FormattingEnabled = true;
+            this.CBOFiltros.Location = new System.Drawing.Point(13, 370);
+            this.CBOFiltros.Name = "CBOFiltros";
+            this.CBOFiltros.Size = new System.Drawing.Size(121, 21);
+            this.CBOFiltros.TabIndex = 7;
+            this.CBOFiltros.SelectedIndexChanged += new System.EventHandler(this.CBOFiltros_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.CBOFiltros);
+            this.Controls.Add(this.TXBBusqueda);
             this.Controls.Add(this.BTVerDetalle);
             this.Controls.Add(this.BTEliminar);
             this.Controls.Add(this.BTNModificar);
@@ -115,6 +138,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxProducto)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -126,6 +150,8 @@
         private System.Windows.Forms.Button BTNModificar;
         private System.Windows.Forms.Button BTEliminar;
         private System.Windows.Forms.Button BTVerDetalle;
+        private System.Windows.Forms.TextBox TXBBusqueda;
+        private System.Windows.Forms.ComboBox CBOFiltros;
     }
 }
 
