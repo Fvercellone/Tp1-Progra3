@@ -36,7 +36,6 @@
             this.BTEliminar = new System.Windows.Forms.Button();
             this.BTNModificar = new System.Windows.Forms.Button();
             this.DGVProductos = new System.Windows.Forms.DataGridView();
-            this.BTCancelar = new System.Windows.Forms.Button();
             this.BTAceptar = new System.Windows.Forms.Button();
             this.TBNombre = new System.Windows.Forms.TextBox();
             this.LBNombre = new System.Windows.Forms.Label();
@@ -132,20 +131,10 @@
             this.DGVProductos.Size = new System.Drawing.Size(446, 352);
             this.DGVProductos.TabIndex = 11;
             // 
-            // BTCancelar
-            // 
-            this.BTCancelar.Location = new System.Drawing.Point(98, 111);
-            this.BTCancelar.Name = "BTCancelar";
-            this.BTCancelar.Size = new System.Drawing.Size(75, 23);
-            this.BTCancelar.TabIndex = 33;
-            this.BTCancelar.Text = "Cancelar";
-            this.BTCancelar.UseVisualStyleBackColor = true;
-            this.BTCancelar.Click += new System.EventHandler(this.BTCancelar_Click);
-            // 
             // BTAceptar
             // 
             this.BTAceptar.Enabled = false;
-            this.BTAceptar.Location = new System.Drawing.Point(17, 111);
+            this.BTAceptar.Location = new System.Drawing.Point(61, 109);
             this.BTAceptar.Name = "BTAceptar";
             this.BTAceptar.Size = new System.Drawing.Size(75, 23);
             this.BTAceptar.TabIndex = 32;
@@ -182,7 +171,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.TBNombre);
-            this.groupBox1.Controls.Add(this.BTCancelar);
             this.groupBox1.Controls.Add(this.LBTitulo);
             this.groupBox1.Controls.Add(this.BTAceptar);
             this.groupBox1.Controls.Add(this.LBNombre);
@@ -309,7 +297,6 @@
         private System.Windows.Forms.Button BTEliminar;
         private System.Windows.Forms.Button BTNModificar;
         private System.Windows.Forms.DataGridView DGVProductos;
-        private System.Windows.Forms.Button BTCancelar;
         private System.Windows.Forms.Button BTAceptar;
         private System.Windows.Forms.TextBox TBNombre;
         private System.Windows.Forms.Label LBNombre;

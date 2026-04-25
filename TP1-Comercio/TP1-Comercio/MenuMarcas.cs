@@ -56,8 +56,6 @@ namespace TP1_Comercio
 
         }
 
-
-
         private void cargar()
         {
             ManejadorMarca conexion = new ManejadorMarca();
@@ -117,22 +115,30 @@ namespace TP1_Comercio
             ManejadorMarca conexion = new ManejadorMarca();
             try
             {
-                //if (marca == null)
+
                     marca = new Marca();
 
                 marca.Nombre = TBNombre.Text;
-               /* if (marca.Id != 0)
+
+                if (ValidacionExisten(marca.Nombre) == true)
                 {
-                    conexion.modificar(marca);
-                    MessageBox.Show("Marca modificada con éxito");
+                    MessageBox.Show("No se puede agregar la marca porque ya existe.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                else
-                }
-                {*/
+
+                DialogResult result = MessageBox.Show("Desea Agregar la marca?", "Marca Agregada", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
                     conexion.agregar(marca);
                     MessageBox.Show("Marca agregada con éxito");
+                }
+                else
+                {
+                    MessageBox.Show("Marca no agregada");
+                    TBNombre.Text = "";
+                }
 
-            }
+                }
             catch (FormatException)
             {
                 MessageBox.Show("No puedes agregar un Nombre Vacio");
@@ -150,21 +156,22 @@ namespace TP1_Comercio
         }
         
 
-        private void BTCancelar_Click(object sender, EventArgs e)
-        {
-            TBNombre.Text = "";
-        }
         /*--Eliminar--*/
         private void BTEliminar_Click(object sender, EventArgs e)
         {
             ManejadorMarca conexion = new ManejadorMarca();
-            Marca Seleccionada;
+            Producto producto = new Producto();
+            Marca Seleccionada= (Marca)DGVProductos.CurrentRow.DataBoundItem;
             try
-            {
+            { 
+                if (ValidacionExisten(Seleccionada.idMarca) == true)
+                {
+                    MessageBox.Show("No se puede eliminar la marca porque hay productos asociados a ella.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 DialogResult result = MessageBox.Show("Desea eliminar la marca seleccionada?", "Marca Eliminada", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
-                    Seleccionada = (Marca)DGVProductos.CurrentRow.DataBoundItem;
                     conexion.Eliminar(Seleccionada.idMarca);
                     cargar();
                 }
@@ -177,6 +184,34 @@ namespace TP1_Comercio
         }
 
 
+        public bool ValidacionExisten(int idMarca)
+        {
+            manjadorProductos  conexion = new manjadorProductos();
+            List<Producto> listaProductos = conexion.listar();
+            foreach (Producto producto in listaProductos)
+            {
+                if (producto.Marca != null && producto.Marca.idMarca == idMarca)
+                {
+                    return true;
+                }
+            }
+            return false; 
+        }
+        public bool ValidacionExisten(string Nombre)
+        {
+            ManejadorMarca conexion = new ManejadorMarca();
+            List<Marca> Lista = conexion.Listar();
+            foreach (Marca marca in Lista)
+            {
+                if (marca != null && marca.Nombre.ToUpperInvariant() == Nombre.ToUpperInvariant())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
         /*--Modificar--*/
         private void BTNModificar_Click(object sender, EventArgs e)
         {
@@ -186,6 +221,12 @@ namespace TP1_Comercio
                 Marca Seleccionada = (Marca)DGVProductos.CurrentRow.DataBoundItem;
             try
             {
+                if (ValidacionExisten(Seleccionada.idMarca) == true)
+                {
+                    MessageBox.Show("No se puede Modificar la marca porque hay productos asociados a ella.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 TBID.Text = Seleccionada.idMarca.ToString();
                 TBNombre2.Text = Seleccionada.Nombre;
                 
