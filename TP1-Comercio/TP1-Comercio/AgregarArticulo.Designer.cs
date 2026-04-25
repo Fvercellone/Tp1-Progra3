@@ -46,6 +46,7 @@
             this.TXBFoto = new System.Windows.Forms.TextBox();
             this.ImagenArchivo = new System.Windows.Forms.Button();
             this.NUDPrecio = new System.Windows.Forms.NumericUpDown();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.PBNuevoProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDPrecio)).BeginInit();
             this.SuspendLayout();
@@ -225,6 +226,14 @@
             0});
             this.NUDPrecio.ValueChanged += new System.EventHandler(this.TBCodigo_TextChanged);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(539, 24);
+            this.menuStrip1.TabIndex = 23;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
             // AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -248,6 +257,8 @@
             this.Controls.Add(this.LBNombre);
             this.Controls.Add(this.TBCodigo);
             this.Controls.Add(this.LBCodigo);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "AgregarArticulo";
             this.Text = "AgregarArticulo";
             this.Load += new System.EventHandler(this.AgregarArticulo_Load);
@@ -278,5 +289,6 @@
         private System.Windows.Forms.TextBox TXBFoto;
         private System.Windows.Forms.Button ImagenArchivo;
         private System.Windows.Forms.NumericUpDown NUDPrecio;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }

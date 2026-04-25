@@ -165,5 +165,25 @@ namespace TP1_Comercio
                 string seleccionado = CBOFiltros.SelectedItem.ToString();
             }
         }
+
+        private void BTNAccesoProcductos_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Ya te encuentras en el menú de Productos.");
+        }
+        private void BNTAccesoMarcas_Click(object sender, EventArgs e)
+        {
+            MenuMarcas marcas = new MenuMarcas();
+            this.Hide();
+            marcas.ShowDialog();
+            this.Show();
+        }
+
+        /*
+        private void BTNAccesoCategoria_Click(object sender, EventArgs e)
+        {
+            MenuCategorias categorias = new MenuCategorias();
+            categorias.Show();
+            this.Hide();
+        }*/
     }
 }
