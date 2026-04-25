@@ -29,28 +29,18 @@ namespace Conexion
                     aux.Name = (string)conexion._lector["Nombre"];
                     aux.Description = (string)conexion._lector["Descripcion"];
                     aux.Marca = new Marca();
-                    if (conexion._lector["IdMarca"] != DBNull.Value)
-                        aux.Marca.idMarca = (int)conexion._lector["IdMarca"];
-                    else
-                        aux.Marca.idMarca = 0;
-                    if (conexion._lector["Marca"] != DBNull.Value)
-                        aux.Marca.Nombre = (string)conexion._lector["Marca"];
-                    else
-                        aux.Marca.Nombre = "n/a";
-
+                    aux.Marca.idMarca = (int)conexion._lector["IdMarca"];
+                    aux.Marca.Nombre = (string)conexion._lector["Marca"];
                     aux.Categoria = new Categoria();
-                    if (conexion._lector["IdCategoria"] != DBNull.Value)
-                        aux.Categoria.idCategoria = (int)conexion._lector["IdCategoria"];
-                    else
-                        aux.Categoria.idCategoria = 0;
-                    if (conexion._lector["Categoria"] != DBNull.Value)
-                        aux.Categoria.descripcion = (string)conexion._lector["Categoria"];
-                    else
-                        aux.Categoria.descripcion = "n/a";
+                    aux.Categoria.idCategoria = (int)conexion._lector["IdCategoria"];
+                    aux.Categoria.Nombre = (string)conexion._lector["Categoria"];
                     if (conexion._lector["ImagenUrl"] != DBNull.Value)
+                    {
                         aux.Imagen = (string)conexion._lector["ImagenUrl"];
-                    else
+                    }else
+                    {
                         aux.Imagen = "n/a";
+                    }
                     aux.Precio = (decimal)conexion._lector["Precio"];
                     lista.Add(aux);
                 }

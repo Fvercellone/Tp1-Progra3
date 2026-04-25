@@ -9,11 +9,11 @@ namespace Dominio
     public class Categoria
     {
         public int idCategoria { get; set; }
-        public string descripcion { get; set; }
+        public string Nombre { get; set; }
 
         public override string ToString()
         {
-            return descripcion;
+            return Nombre;
         }
 
     }

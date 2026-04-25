@@ -1,14 +1,15 @@
 ﻿using Conexion;
+using Dominio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Dominio;
 
 namespace TP1_Comercio
 {
@@ -22,6 +23,9 @@ namespace TP1_Comercio
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            string ruta = @"C:\IMG";
+            Directory.CreateDirectory(ruta);
+
             cargar();
 
             CBOFiltros.Items.Add("Nombre");
@@ -133,7 +137,7 @@ namespace TP1_Comercio
             }
             else if (Filtro == "Categoria" && TXBBusqueda.Text != "")
             {
-                listaFiltrada = listaProductos.FindAll(x => x.Categoria.descripcion.ToUpper().Contains(TXBBusqueda.Text.ToUpper()));
+                listaFiltrada = listaProductos.FindAll(x => x.Categoria.Nombre.ToUpper().Contains(TXBBusqueda.Text.ToUpper()));
             }
             else if (Filtro == "Marca" && TXBBusqueda.Text != "")
             {
@@ -166,10 +170,6 @@ namespace TP1_Comercio
             }
         }
 
-        private void BTNAccesoProcductos_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Ya te encuentras en el menú de Productos.");
-        }
         private void BNTAccesoMarcas_Click(object sender, EventArgs e)
         {
             MenuMarcas marcas = new MenuMarcas();
@@ -178,12 +178,13 @@ namespace TP1_Comercio
             this.Show();
         }
 
-        /*
         private void BTNAccesoCategoria_Click(object sender, EventArgs e)
         {
-            MenuCategorias categorias = new MenuCategorias();
-            categorias.Show();
+            menuCategorias categorias = new menuCategorias();
             this.Hide();
-        }*/
+            categorias.ShowDialog();
+            this.Show();
+        }
+
     }
 }

@@ -62,8 +62,24 @@ namespace TP1_Comercio
                 MessageBox.Show("Producto agregado con éxito");
                 }
 
-                if(file != null && !(TXBFoto.Text.ToUpper().Contains("HTTP")))
-                    File.Copy(file.FileName, ConfigurationManager.AppSettings["images-folder"] + file.SafeFileName);
+                if (file != null && !(TXBFoto.Text.ToUpper().Contains("HTTP")))
+                {
+                    string carpetaImagenes = Path.Combine(
+                    AppDomain.CurrentDomain.BaseDirectory,
+                    "assets",
+                    "images"
+                    );
+                    Directory.CreateDirectory(carpetaImagenes);
+
+                    string nombreArchivo = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+
+                    string rutaDestino = Path.Combine(carpetaImagenes, nombreArchivo);
+
+                    File.Copy(file.FileName, rutaDestino, true);
+
+                    // guardar ruta relativa
+                    producto.Imagen = Path.Combine("assets", "images", nombreArchivo);
+                }
 
                 Close();
             }
@@ -83,10 +99,10 @@ namespace TP1_Comercio
             {
                 CBMarca.DataSource = marca.Listar();
                 CBMarca.ValueMember = "idMarca";
-                CBMarca.DisplayMember = "descripcion";
+                CBMarca.DisplayMember = "Nombre";
                 CBCategoria.DataSource = categoria.Listar();
                 CBCategoria.ValueMember = "idCategoria";
-                CBCategoria.DisplayMember = "descripcion";
+                CBCategoria.DisplayMember = "Nombre";
 
                 if (producto != null)
                 {
@@ -134,6 +150,7 @@ namespace TP1_Comercio
                 TXBFoto.Text = file.FileName;
                 cargarImagen(file.FileName);
             }
+
         }
 
         private void TBCodigo_TextChanged(object sender, EventArgs e)

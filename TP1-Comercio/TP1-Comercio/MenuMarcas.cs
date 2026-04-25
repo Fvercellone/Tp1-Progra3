@@ -29,11 +29,6 @@ namespace TP1_Comercio
 
         }
 
-        private void BNTAccesoMarcas_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Ya te encuentras en el menú de Marcas.");
-        }
-
         private void BTNAccesoProcductos_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -51,10 +46,6 @@ namespace TP1_Comercio
 
 
         List<Marca> listaMarca = new List<Marca>();
-        private void MenuMacas_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void cargar()
         {
@@ -116,7 +107,7 @@ namespace TP1_Comercio
             try
             {
 
-                    marca = new Marca();
+                marca = new Marca();
 
                 marca.Nombre = TBNombre.Text;
 
@@ -226,8 +217,6 @@ namespace TP1_Comercio
                     MessageBox.Show("No se puede Modificar la marca porque hay productos asociados a ella.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-
-                TBID.Text = Seleccionada.idMarca.ToString();
                 TBNombre2.Text = Seleccionada.Nombre;
                 
             }
@@ -244,7 +233,6 @@ namespace TP1_Comercio
             {
                 Marca Seleccionada = (Marca)DGVProductos.CurrentRow.DataBoundItem;
                 ManejadorMarca conexion = new ManejadorMarca();
-                Seleccionada.idMarca = int.Parse(TBID.Text);
                 Seleccionada.Nombre = TBNombre2.Text;
 
                 conexion.Modificar(Seleccionada);
@@ -259,7 +247,6 @@ namespace TP1_Comercio
             }
             finally
             {
-                TBID.Text = "";
                 TBNombre2.Text = "";
                 groupBox2.Enabled = false;
             }
@@ -273,9 +260,9 @@ namespace TP1_Comercio
 
         private void BTNCancelar_Click_1(object sender, EventArgs e)
         {
-            TBID.Text = "";
             TBNombre2.Text = "";
             groupBox2.Enabled = false;
         }
+
     }
 }

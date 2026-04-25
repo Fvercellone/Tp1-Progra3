@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarArticulo));
             this.LBCodigo = new System.Windows.Forms.Label();
             this.TBCodigo = new System.Windows.Forms.TextBox();
             this.TBNombre = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.TXBFoto = new System.Windows.Forms.TextBox();
             this.ImagenArchivo = new System.Windows.Forms.Button();
             this.NUDPrecio = new System.Windows.Forms.NumericUpDown();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.PBNuevoProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDPrecio)).BeginInit();
             this.SuspendLayout();
@@ -54,122 +54,145 @@
             // LBCodigo
             // 
             this.LBCodigo.AutoSize = true;
-            this.LBCodigo.Location = new System.Drawing.Point(69, 33);
+            this.LBCodigo.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.LBCodigo.Location = new System.Drawing.Point(2, 30);
             this.LBCodigo.Name = "LBCodigo";
-            this.LBCodigo.Size = new System.Drawing.Size(40, 13);
+            this.LBCodigo.Size = new System.Drawing.Size(52, 17);
             this.LBCodigo.TabIndex = 0;
             this.LBCodigo.Text = "Codigo";
             // 
             // TBCodigo
             // 
-            this.TBCodigo.Location = new System.Drawing.Point(141, 30);
+            this.TBCodigo.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.TBCodigo.Location = new System.Drawing.Point(84, 25);
             this.TBCodigo.Name = "TBCodigo";
-            this.TBCodigo.Size = new System.Drawing.Size(100, 20);
-            this.TBCodigo.TabIndex = 1;
+            this.TBCodigo.Size = new System.Drawing.Size(121, 22);
+            this.TBCodigo.TabIndex = 0;
             this.TBCodigo.TextChanged += new System.EventHandler(this.TBCodigo_TextChanged);
             // 
             // TBNombre
             // 
-            this.TBNombre.Location = new System.Drawing.Point(141, 56);
+            this.TBNombre.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.TBNombre.Location = new System.Drawing.Point(84, 53);
             this.TBNombre.Name = "TBNombre";
-            this.TBNombre.Size = new System.Drawing.Size(100, 20);
-            this.TBNombre.TabIndex = 3;
+            this.TBNombre.Size = new System.Drawing.Size(121, 22);
+            this.TBNombre.TabIndex = 1;
             this.TBNombre.TextChanged += new System.EventHandler(this.TBCodigo_TextChanged);
             // 
             // LBNombre
             // 
             this.LBNombre.AutoSize = true;
-            this.LBNombre.Location = new System.Drawing.Point(69, 59);
+            this.LBNombre.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.LBNombre.Location = new System.Drawing.Point(2, 56);
             this.LBNombre.Name = "LBNombre";
-            this.LBNombre.Size = new System.Drawing.Size(44, 13);
+            this.LBNombre.Size = new System.Drawing.Size(56, 17);
             this.LBNombre.TabIndex = 2;
             this.LBNombre.Text = "Nombre";
             // 
             // TBDescripcion
             // 
-            this.TBDescripcion.Location = new System.Drawing.Point(141, 82);
+            this.TBDescripcion.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.TBDescripcion.Location = new System.Drawing.Point(84, 79);
             this.TBDescripcion.Name = "TBDescripcion";
-            this.TBDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.TBDescripcion.TabIndex = 5;
+            this.TBDescripcion.Size = new System.Drawing.Size(121, 22);
+            this.TBDescripcion.TabIndex = 2;
             // 
             // LBDescripcion
             // 
             this.LBDescripcion.AutoSize = true;
-            this.LBDescripcion.Location = new System.Drawing.Point(69, 85);
+            this.LBDescripcion.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.LBDescripcion.Location = new System.Drawing.Point(2, 82);
             this.LBDescripcion.Name = "LBDescripcion";
-            this.LBDescripcion.Size = new System.Drawing.Size(63, 13);
+            this.LBDescripcion.Size = new System.Drawing.Size(79, 17);
             this.LBDescripcion.TabIndex = 4;
             this.LBDescripcion.Text = "Descripcion";
             // 
             // LBMarca
             // 
             this.LBMarca.AutoSize = true;
-            this.LBMarca.Location = new System.Drawing.Point(69, 111);
+            this.LBMarca.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.LBMarca.Location = new System.Drawing.Point(2, 108);
             this.LBMarca.Name = "LBMarca";
-            this.LBMarca.Size = new System.Drawing.Size(37, 13);
+            this.LBMarca.Size = new System.Drawing.Size(47, 17);
             this.LBMarca.TabIndex = 6;
             this.LBMarca.Text = "Marca";
             // 
             // LBCategoria
             // 
             this.LBCategoria.AutoSize = true;
-            this.LBCategoria.Location = new System.Drawing.Point(69, 137);
+            this.LBCategoria.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.LBCategoria.Location = new System.Drawing.Point(2, 134);
             this.LBCategoria.Name = "LBCategoria";
-            this.LBCategoria.Size = new System.Drawing.Size(52, 13);
+            this.LBCategoria.Size = new System.Drawing.Size(69, 17);
             this.LBCategoria.TabIndex = 8;
             this.LBCategoria.Text = "Categoria";
             // 
             // LBPrecio
             // 
             this.LBPrecio.AutoSize = true;
-            this.LBPrecio.Location = new System.Drawing.Point(69, 167);
+            this.LBPrecio.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.LBPrecio.Location = new System.Drawing.Point(2, 163);
             this.LBPrecio.Name = "LBPrecio";
-            this.LBPrecio.Size = new System.Drawing.Size(37, 13);
+            this.LBPrecio.Size = new System.Drawing.Size(46, 17);
             this.LBPrecio.TabIndex = 10;
             this.LBPrecio.Text = "Precio";
             // 
             // BTAceptar
             // 
+            this.BTAceptar.BackColor = System.Drawing.Color.RoyalBlue;
             this.BTAceptar.Enabled = false;
-            this.BTAceptar.Location = new System.Drawing.Point(72, 217);
+            this.BTAceptar.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.BTAceptar.FlatAppearance.BorderSize = 0;
+            this.BTAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTAceptar.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.BTAceptar.ForeColor = System.Drawing.Color.White;
+            this.BTAceptar.Location = new System.Drawing.Point(15, 214);
             this.BTAceptar.Name = "BTAceptar";
             this.BTAceptar.Size = new System.Drawing.Size(75, 23);
-            this.BTAceptar.TabIndex = 13;
+            this.BTAceptar.TabIndex = 8;
             this.BTAceptar.Text = "Aceptar";
-            this.BTAceptar.UseVisualStyleBackColor = true;
+            this.BTAceptar.UseVisualStyleBackColor = false;
             this.BTAceptar.Click += new System.EventHandler(this.BTAceptar_Click);
             // 
             // BTCancelar
             // 
-            this.BTCancelar.Location = new System.Drawing.Point(187, 217);
+            this.BTCancelar.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BTCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.BTCancelar.FlatAppearance.BorderSize = 0;
+            this.BTCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BTCancelar.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.BTCancelar.ForeColor = System.Drawing.Color.White;
+            this.BTCancelar.Location = new System.Drawing.Point(130, 214);
             this.BTCancelar.Name = "BTCancelar";
             this.BTCancelar.Size = new System.Drawing.Size(75, 23);
-            this.BTCancelar.TabIndex = 14;
+            this.BTCancelar.TabIndex = 9;
             this.BTCancelar.Text = "Cancelar";
-            this.BTCancelar.UseVisualStyleBackColor = true;
+            this.BTCancelar.UseVisualStyleBackColor = false;
             this.BTCancelar.Click += new System.EventHandler(this.BTCancelar_Click);
             // 
             // CBMarca
             // 
             this.CBMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBMarca.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.CBMarca.FormattingEnabled = true;
-            this.CBMarca.Location = new System.Drawing.Point(141, 111);
+            this.CBMarca.Location = new System.Drawing.Point(84, 103);
             this.CBMarca.Name = "CBMarca";
-            this.CBMarca.Size = new System.Drawing.Size(121, 21);
-            this.CBMarca.TabIndex = 16;
+            this.CBMarca.Size = new System.Drawing.Size(121, 25);
+            this.CBMarca.TabIndex = 3;
             // 
             // CBCategoria
             // 
             this.CBCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBCategoria.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.CBCategoria.FormattingEnabled = true;
-            this.CBCategoria.Location = new System.Drawing.Point(141, 137);
+            this.CBCategoria.Location = new System.Drawing.Point(84, 130);
             this.CBCategoria.Name = "CBCategoria";
-            this.CBCategoria.Size = new System.Drawing.Size(121, 21);
-            this.CBCategoria.TabIndex = 17;
+            this.CBCategoria.Size = new System.Drawing.Size(121, 25);
+            this.CBCategoria.TabIndex = 4;
             // 
             // PBNuevoProducto
             // 
-            this.PBNuevoProducto.Location = new System.Drawing.Point(292, 33);
+            this.PBNuevoProducto.Location = new System.Drawing.Point(221, 27);
             this.PBNuevoProducto.Name = "PBNuevoProducto";
             this.PBNuevoProducto.Size = new System.Drawing.Size(235, 210);
             this.PBNuevoProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -179,33 +202,41 @@
             // LBLFoto
             // 
             this.LBLFoto.AutoSize = true;
-            this.LBLFoto.Location = new System.Drawing.Point(71, 191);
+            this.LBLFoto.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.LBLFoto.Location = new System.Drawing.Point(2, 188);
             this.LBLFoto.Name = "LBLFoto";
-            this.LBLFoto.Size = new System.Drawing.Size(28, 13);
+            this.LBLFoto.Size = new System.Drawing.Size(35, 17);
             this.LBLFoto.TabIndex = 19;
             this.LBLFoto.Text = "Foto";
             // 
             // TXBFoto
             // 
-            this.TXBFoto.Location = new System.Drawing.Point(141, 191);
+            this.TXBFoto.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.TXBFoto.Location = new System.Drawing.Point(84, 185);
             this.TXBFoto.Name = "TXBFoto";
-            this.TXBFoto.Size = new System.Drawing.Size(100, 20);
-            this.TXBFoto.TabIndex = 20;
+            this.TXBFoto.Size = new System.Drawing.Size(89, 22);
+            this.TXBFoto.TabIndex = 6;
             this.TXBFoto.Leave += new System.EventHandler(this.TXBFoto_Leave);
             // 
             // ImagenArchivo
             // 
-            this.ImagenArchivo.Location = new System.Drawing.Point(247, 191);
+            this.ImagenArchivo.BackColor = System.Drawing.Color.RoyalBlue;
+            this.ImagenArchivo.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.ImagenArchivo.FlatAppearance.BorderSize = 0;
+            this.ImagenArchivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ImagenArchivo.ForeColor = System.Drawing.Color.Transparent;
+            this.ImagenArchivo.Location = new System.Drawing.Point(182, 182);
             this.ImagenArchivo.Name = "ImagenArchivo";
             this.ImagenArchivo.Size = new System.Drawing.Size(23, 23);
-            this.ImagenArchivo.TabIndex = 21;
+            this.ImagenArchivo.TabIndex = 7;
             this.ImagenArchivo.Text = "+";
-            this.ImagenArchivo.UseVisualStyleBackColor = true;
+            this.ImagenArchivo.UseVisualStyleBackColor = false;
             this.ImagenArchivo.Click += new System.EventHandler(this.ImagenArchivo_Click);
             // 
             // NUDPrecio
             // 
-            this.NUDPrecio.Location = new System.Drawing.Point(141, 164);
+            this.NUDPrecio.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.NUDPrecio.Location = new System.Drawing.Point(84, 158);
             this.NUDPrecio.Maximum = new decimal(new int[] {
             268435455,
             1042612833,
@@ -217,8 +248,8 @@
             0,
             0});
             this.NUDPrecio.Name = "NUDPrecio";
-            this.NUDPrecio.Size = new System.Drawing.Size(120, 20);
-            this.NUDPrecio.TabIndex = 22;
+            this.NUDPrecio.Size = new System.Drawing.Size(121, 22);
+            this.NUDPrecio.TabIndex = 5;
             this.NUDPrecio.Value = new decimal(new int[] {
             1,
             0,
@@ -226,19 +257,12 @@
             0});
             this.NUDPrecio.ValueChanged += new System.EventHandler(this.TBCodigo_TextChanged);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(539, 24);
-            this.menuStrip1.TabIndex = 23;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
             // AgregarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 263);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.ClientSize = new System.Drawing.Size(473, 263);
             this.Controls.Add(this.NUDPrecio);
             this.Controls.Add(this.ImagenArchivo);
             this.Controls.Add(this.TXBFoto);
@@ -257,10 +281,13 @@
             this.Controls.Add(this.LBNombre);
             this.Controls.Add(this.TBCodigo);
             this.Controls.Add(this.LBCodigo);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(489, 302);
+            this.MinimumSize = new System.Drawing.Size(489, 302);
             this.Name = "AgregarArticulo";
-            this.Text = "AgregarArticulo";
+            this.Text = "Agregar Articulos";
             this.Load += new System.EventHandler(this.AgregarArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PBNuevoProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUDPrecio)).EndInit();
@@ -289,6 +316,5 @@
         private System.Windows.Forms.TextBox TXBFoto;
         private System.Windows.Forms.Button ImagenArchivo;
         private System.Windows.Forms.NumericUpDown NUDPrecio;
-        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
