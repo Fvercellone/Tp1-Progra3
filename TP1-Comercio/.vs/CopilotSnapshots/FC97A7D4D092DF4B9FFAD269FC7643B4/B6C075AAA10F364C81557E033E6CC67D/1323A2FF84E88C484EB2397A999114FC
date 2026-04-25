@@ -76,25 +76,6 @@ namespace Conexion
             }
         }
 
-        public void Modificar(Marca marca)
-        {
-            ConexionDB conexion = new ConexionDB();
-            try
-            {
-                conexion.settearConsulta("BEGIN TRANSACTION; UPDATE MARCAS SET Descripcion = @Nombre WHERE Id = @Id; COMMIT");
-                conexion.agregarParametro("@Id", marca.idMarca);
-                conexion.agregarParametro("@Nombre", marca.Nombre);
-                conexion.ejecutarAccion();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                conexion.cerrarConexion();
-            }
-        }
 
     }
 }

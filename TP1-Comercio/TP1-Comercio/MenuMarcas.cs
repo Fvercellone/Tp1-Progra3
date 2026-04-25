@@ -3,6 +3,7 @@ using Dominio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -14,6 +15,8 @@ namespace TP1_Comercio
 {
     public partial class MenuMarcas : Form
     {
+
+        private Marca marca = null;
         public MenuMarcas()
         {
             InitializeComponent();
@@ -62,7 +65,6 @@ namespace TP1_Comercio
             {
                 listaMarca = conexion.Listar();
                 DGVProductos.DataSource = listaMarca;
-                CargarImagen("https://create.vista.com/es/photos/marca");
             }
             catch (Exception ex)
             {
@@ -71,17 +73,6 @@ namespace TP1_Comercio
             }
         }
 
-        public void CargarImagen(string imagen)
-        {
-            try
-            {
-                pbxProducto.Load(imagen);
-            }
-            catch (Exception)
-            {
-                pbxProducto.Load("https://capacitacion.fundacionbancopampa.com.ar/wp-content/uploads/2024/09/placeholder-4.png");
-            }
-        }
 
         /*FILTRO*/
 
@@ -92,7 +83,7 @@ namespace TP1_Comercio
 
             if (Filtro == "Nombre" && TXBBusqueda.Text != "")
             {
-                listaFiltrada = listaMarca.FindAll(x => x.descripcion.ToUpper().Contains(TXBBusqueda.Text.ToUpper()));
+                listaFiltrada = listaMarca.FindAll(x => x.Nombre.ToUpper().Contains(TXBBusqueda.Text.ToUpper()));
             }
             else if (Filtro == "ID" && TXBBusqueda.Text != "")
             {
@@ -120,9 +111,130 @@ namespace TP1_Comercio
             }
         }
 
+        /*--Agregar--*/
+        private void BTAceptar_Click(object sender, EventArgs e)
+        {
+            ManejadorMarca conexion = new ManejadorMarca();
+            try
+            {
+                //if (marca == null)
+                    marca = new Marca();
+
+                marca.Nombre = TBNombre.Text;
+               /* if (marca.Id != 0)
+                {
+                    conexion.modificar(marca);
+                    MessageBox.Show("Marca modificada con éxito");
+                }
+                else
+                }
+                {*/
+                    conexion.agregar(marca);
+                    MessageBox.Show("Marca agregada con éxito");
+
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("No puedes agregar un Nombre Vacio");
+            }
+            finally
+            {
+                TBNombre.Text = "";
+                cargar();
+            }
+        }
+
+        private void TBNombre_TextChanged(object sender, EventArgs e)
+        {
+            BTAceptar.Enabled = !string.IsNullOrEmpty(TBNombre.Text);
+        }
+        
+
+        private void BTCancelar_Click(object sender, EventArgs e)
+        {
+            TBNombre.Text = "";
+        }
+        /*--Eliminar--*/
+        private void BTEliminar_Click(object sender, EventArgs e)
+        {
+            ManejadorMarca conexion = new ManejadorMarca();
+            Marca Seleccionada;
+            try
+            {
+                DialogResult result = MessageBox.Show("Desea eliminar la marca seleccionada?", "Marca Eliminada", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    Seleccionada = (Marca)DGVProductos.CurrentRow.DataBoundItem;
+                    conexion.Eliminar(Seleccionada.idMarca);
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
 
 
+        /*--Modificar--*/
+        private void BTNModificar_Click(object sender, EventArgs e)
+        {
+
+            groupBox2.Enabled = true;
+
+                Marca Seleccionada = (Marca)DGVProductos.CurrentRow.DataBoundItem;
+            try
+            {
+                TBID.Text = Seleccionada.idMarca.ToString();
+                TBNombre2.Text = Seleccionada.Nombre;
+                
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        private void BTNAcepModificacion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Marca Seleccionada = (Marca)DGVProductos.CurrentRow.DataBoundItem;
+                ManejadorMarca conexion = new ManejadorMarca();
+                Seleccionada.idMarca = int.Parse(TBID.Text);
+                Seleccionada.Nombre = TBNombre2.Text;
+
+                conexion.Modificar(Seleccionada);
+
+                MessageBox.Show("Marca modificada con éxito");
+                cargar();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+                TBID.Text = "";
+                TBNombre2.Text = "";
+                groupBox2.Enabled = false;
+            }
+        }
+
+        private void TBNombre2_TextChanged(object sender, EventArgs e)
+        {
+            BTNAcepModificacion.Enabled = !string.IsNullOrEmpty(TBNombre2.Text);
+        }
 
 
+        private void BTNCancelar_Click_1(object sender, EventArgs e)
+        {
+            TBID.Text = "";
+            TBNombre2.Text = "";
+            groupBox2.Enabled = false;
+        }
     }
 }

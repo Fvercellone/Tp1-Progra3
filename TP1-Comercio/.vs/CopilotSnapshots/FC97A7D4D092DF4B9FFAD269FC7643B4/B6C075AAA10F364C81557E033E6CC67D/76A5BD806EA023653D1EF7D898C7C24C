@@ -1,0 +1,82 @@
+﻿using Dominio;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Conexion
+{
+    public class ManejadorMarca
+    {
+        public List<Marca> Listar()
+        {
+            List<Marca> lista = new List<Marca>();
+            ConexionDB conexion = new ConexionDB();
+            try
+            {
+                conexion.settearConsulta("SELECT M.Id, M.Descripcion as Nombre FROM dbo.marcas as M");
+                conexion.ejecutarLectura();
+                while (conexion._lector.Read())
+                {
+                    Marca aux = new Marca();
+                    aux.idMarca = (int)conexion._lector["Id"];
+                    aux.descripcion = (string)conexion._lector["Descripcion"];
+                    lista.Add(aux);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+            }
+        }
+
+        /*AGREGAR, MODIFICAR, ELIMINAR*/
+
+        public void agregar(Marca nuevo)
+        {
+            ConexionDB conexion = new ConexionDB();
+            try
+            {
+                // Validar existencia (case-insensitive) antes de insertar
+                conexion.settearConsulta("SELECT COUNT(1) AS Cant FROM dbo.Marcas WHERE LOWER(Descripcion) = LOWER(@Nombre);");
+                conexion.agregarParametro("@Nombre", nuevo.descripcion);
+                conexion.ejecutarLectura();
+                int existe = 0;
+                if (conexion._lector != null && conexion._lector.Read())
+                {
+                    existe = Convert.ToInt32(conexion._lector["Cant"]);
+                }
+
+                if (existe > 0)
+                {
+                    // Mostrar mensaje y no agregar si ya existe (ignorar mayúsculas/minúsculas)
+                    System.Windows.Forms.MessageBox.Show("Ya existe una Marca con este Nombre, Buscar en la Tabla");
+                    return;
+                }
+
+                // Si no existe, insertar
+                conexion.cerrarConexion();
+
+                conexion = new ConexionDB();
+                conexion.settearConsulta("INSERT INTO dbo.Marcas (Descripcion) VALUES (@Nombre);");
+                conexion.agregarParametro("@Nombre", nuevo.descripcion);
+                conexion.ejecutarAccion();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                conexion.cerrarConexion();
+            }
+        }
+
+    }
+}

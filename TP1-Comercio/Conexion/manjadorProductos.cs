@@ -34,9 +34,9 @@ namespace Conexion
                     else
                         aux.Marca.idMarca = 0;
                     if (conexion._lector["Marca"] != DBNull.Value)
-                        aux.Marca.descripcion = (string)conexion._lector["Marca"];
+                        aux.Marca.Nombre = (string)conexion._lector["Marca"];
                     else
-                        aux.Marca.descripcion = "n/a";
+                        aux.Marca.Nombre = "n/a";
 
                     aux.Categoria = new Categoria();
                     if (conexion._lector["IdCategoria"] != DBNull.Value)

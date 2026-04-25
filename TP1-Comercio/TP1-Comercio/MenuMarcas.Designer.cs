@@ -33,14 +33,26 @@
             this.BTNAccesoProcductos = new System.Windows.Forms.Button();
             this.CBOFiltros = new System.Windows.Forms.ComboBox();
             this.TXBBusqueda = new System.Windows.Forms.TextBox();
-            this.BTVerDetalle = new System.Windows.Forms.Button();
             this.BTEliminar = new System.Windows.Forms.Button();
             this.BTNModificar = new System.Windows.Forms.Button();
-            this.BTAgregarA = new System.Windows.Forms.Button();
-            this.pbxProducto = new System.Windows.Forms.PictureBox();
             this.DGVProductos = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProducto)).BeginInit();
+            this.BTCancelar = new System.Windows.Forms.Button();
+            this.BTAceptar = new System.Windows.Forms.Button();
+            this.TBNombre = new System.Windows.Forms.TextBox();
+            this.LBNombre = new System.Windows.Forms.Label();
+            this.LBTitulo = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TBID = new System.Windows.Forms.TextBox();
+            this.LBID = new System.Windows.Forms.Label();
+            this.TBNombre2 = new System.Windows.Forms.TextBox();
+            this.BTNCancelar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.BTNAcepModificacion = new System.Windows.Forms.Button();
+            this.LBNombre2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // BTNAccesoCategoria
@@ -89,50 +101,25 @@
             this.TXBBusqueda.TabIndex = 17;
             this.TXBBusqueda.TextChanged += new System.EventHandler(this.TXBBusqueda_TextChanged);
             // 
-            // BTVerDetalle
-            // 
-            this.BTVerDetalle.Location = new System.Drawing.Point(345, 462);
-            this.BTVerDetalle.Name = "BTVerDetalle";
-            this.BTVerDetalle.Size = new System.Drawing.Size(105, 39);
-            this.BTVerDetalle.TabIndex = 16;
-            this.BTVerDetalle.Text = "Ver Detalle";
-            this.BTVerDetalle.UseVisualStyleBackColor = true;
-            // 
             // BTEliminar
             // 
-            this.BTEliminar.Location = new System.Drawing.Point(123, 462);
+            this.BTEliminar.Location = new System.Drawing.Point(111, 462);
             this.BTEliminar.Name = "BTEliminar";
             this.BTEliminar.Size = new System.Drawing.Size(105, 39);
             this.BTEliminar.TabIndex = 15;
             this.BTEliminar.Text = "Eliminar";
             this.BTEliminar.UseVisualStyleBackColor = true;
+            this.BTEliminar.Click += new System.EventHandler(this.BTEliminar_Click);
             // 
             // BTNModificar
             // 
-            this.BTNModificar.Location = new System.Drawing.Point(234, 462);
+            this.BTNModificar.Location = new System.Drawing.Point(264, 462);
             this.BTNModificar.Name = "BTNModificar";
             this.BTNModificar.Size = new System.Drawing.Size(105, 39);
             this.BTNModificar.TabIndex = 14;
             this.BTNModificar.Text = "Modificar";
             this.BTNModificar.UseVisualStyleBackColor = true;
-            // 
-            // BTAgregarA
-            // 
-            this.BTAgregarA.Location = new System.Drawing.Point(12, 462);
-            this.BTAgregarA.Name = "BTAgregarA";
-            this.BTAgregarA.Size = new System.Drawing.Size(105, 39);
-            this.BTAgregarA.TabIndex = 13;
-            this.BTAgregarA.Text = "Agregar";
-            this.BTAgregarA.UseVisualStyleBackColor = true;
-            // 
-            // pbxProducto
-            // 
-            this.pbxProducto.Location = new System.Drawing.Point(464, 75);
-            this.pbxProducto.Name = "pbxProducto";
-            this.pbxProducto.Size = new System.Drawing.Size(278, 378);
-            this.pbxProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxProducto.TabIndex = 12;
-            this.pbxProducto.TabStop = false;
+            this.BTNModificar.Click += new System.EventHandler(this.BTNModificar_Click);
             // 
             // DGVProductos
             // 
@@ -145,26 +132,168 @@
             this.DGVProductos.Size = new System.Drawing.Size(446, 352);
             this.DGVProductos.TabIndex = 11;
             // 
+            // BTCancelar
+            // 
+            this.BTCancelar.Location = new System.Drawing.Point(98, 111);
+            this.BTCancelar.Name = "BTCancelar";
+            this.BTCancelar.Size = new System.Drawing.Size(75, 23);
+            this.BTCancelar.TabIndex = 33;
+            this.BTCancelar.Text = "Cancelar";
+            this.BTCancelar.UseVisualStyleBackColor = true;
+            this.BTCancelar.Click += new System.EventHandler(this.BTCancelar_Click);
+            // 
+            // BTAceptar
+            // 
+            this.BTAceptar.Enabled = false;
+            this.BTAceptar.Location = new System.Drawing.Point(17, 111);
+            this.BTAceptar.Name = "BTAceptar";
+            this.BTAceptar.Size = new System.Drawing.Size(75, 23);
+            this.BTAceptar.TabIndex = 32;
+            this.BTAceptar.Text = "Aceptar";
+            this.BTAceptar.UseVisualStyleBackColor = true;
+            this.BTAceptar.Click += new System.EventHandler(this.BTAceptar_Click);
+            // 
+            // TBNombre
+            // 
+            this.TBNombre.Location = new System.Drawing.Point(74, 60);
+            this.TBNombre.Name = "TBNombre";
+            this.TBNombre.Size = new System.Drawing.Size(100, 20);
+            this.TBNombre.TabIndex = 26;
+            this.TBNombre.TextChanged += new System.EventHandler(this.TBNombre_TextChanged);
+            // 
+            // LBNombre
+            // 
+            this.LBNombre.AutoSize = true;
+            this.LBNombre.Location = new System.Drawing.Point(24, 63);
+            this.LBNombre.Name = "LBNombre";
+            this.LBNombre.Size = new System.Drawing.Size(44, 13);
+            this.LBNombre.TabIndex = 25;
+            this.LBNombre.Text = "Nombre";
+            // 
+            // LBTitulo
+            // 
+            this.LBTitulo.AutoSize = true;
+            this.LBTitulo.Location = new System.Drawing.Point(45, 16);
+            this.LBTitulo.Name = "LBTitulo";
+            this.LBTitulo.Size = new System.Drawing.Size(101, 13);
+            this.LBTitulo.TabIndex = 40;
+            this.LBTitulo.Text = "AGREGAR MARCA";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.TBNombre);
+            this.groupBox1.Controls.Add(this.BTCancelar);
+            this.groupBox1.Controls.Add(this.LBTitulo);
+            this.groupBox1.Controls.Add(this.BTAceptar);
+            this.groupBox1.Controls.Add(this.LBNombre);
+            this.groupBox1.Location = new System.Drawing.Point(519, 88);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(190, 154);
+            this.groupBox1.TabIndex = 41;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.TBID);
+            this.groupBox2.Controls.Add(this.LBID);
+            this.groupBox2.Controls.Add(this.TBNombre2);
+            this.groupBox2.Controls.Add(this.BTNCancelar);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.BTNAcepModificacion);
+            this.groupBox2.Controls.Add(this.LBNombre2);
+            this.groupBox2.Enabled = false;
+            this.groupBox2.Location = new System.Drawing.Point(519, 273);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(190, 154);
+            this.groupBox2.TabIndex = 42;
+            this.groupBox2.TabStop = false;
+            // 
+            // TBID
+            // 
+            this.TBID.Location = new System.Drawing.Point(73, 43);
+            this.TBID.Name = "TBID";
+            this.TBID.ReadOnly = true;
+            this.TBID.Size = new System.Drawing.Size(100, 20);
+            this.TBID.TabIndex = 42;
+            // 
+            // LBID
+            // 
+            this.LBID.AutoSize = true;
+            this.LBID.Location = new System.Drawing.Point(23, 46);
+            this.LBID.Name = "LBID";
+            this.LBID.Size = new System.Drawing.Size(18, 13);
+            this.LBID.TabIndex = 41;
+            this.LBID.Text = "ID";
+            // 
+            // TBNombre2
+            // 
+            this.TBNombre2.Location = new System.Drawing.Point(74, 71);
+            this.TBNombre2.Name = "TBNombre2";
+            this.TBNombre2.Size = new System.Drawing.Size(100, 20);
+            this.TBNombre2.TabIndex = 26;
+            this.TBNombre2.TextChanged += new System.EventHandler(this.TBNombre2_TextChanged);
+            // 
+            // BTNCancelar
+            // 
+            this.BTNCancelar.Location = new System.Drawing.Point(98, 111);
+            this.BTNCancelar.Name = "BTNCancelar";
+            this.BTNCancelar.Size = new System.Drawing.Size(75, 23);
+            this.BTNCancelar.TabIndex = 33;
+            this.BTNCancelar.Text = "Cancelar";
+            this.BTNCancelar.UseVisualStyleBackColor = true;
+            this.BTNCancelar.Click += new System.EventHandler(this.BTNCancelar_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(45, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 13);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "MODIFICAR MARCA";
+            // 
+            // BTNAcepModificacion
+            // 
+            this.BTNAcepModificacion.Enabled = false;
+            this.BTNAcepModificacion.Location = new System.Drawing.Point(17, 111);
+            this.BTNAcepModificacion.Name = "BTNAcepModificacion";
+            this.BTNAcepModificacion.Size = new System.Drawing.Size(75, 23);
+            this.BTNAcepModificacion.TabIndex = 32;
+            this.BTNAcepModificacion.Text = "Aceptar";
+            this.BTNAcepModificacion.UseVisualStyleBackColor = true;
+            this.BTNAcepModificacion.Click += new System.EventHandler(this.BTNAcepModificacion_Click);
+            // 
+            // LBNombre2
+            // 
+            this.LBNombre2.AutoSize = true;
+            this.LBNombre2.Location = new System.Drawing.Point(24, 74);
+            this.LBNombre2.Name = "LBNombre2";
+            this.LBNombre2.Size = new System.Drawing.Size(44, 13);
+            this.LBNombre2.TabIndex = 25;
+            this.LBNombre2.Text = "Nombre";
+            // 
             // MenuMarcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(755, 509);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BTNAccesoCategoria);
             this.Controls.Add(this.BNTAccesoMarcas);
             this.Controls.Add(this.BTNAccesoProcductos);
             this.Controls.Add(this.CBOFiltros);
             this.Controls.Add(this.TXBBusqueda);
-            this.Controls.Add(this.BTVerDetalle);
             this.Controls.Add(this.BTEliminar);
             this.Controls.Add(this.BTNModificar);
-            this.Controls.Add(this.BTAgregarA);
-            this.Controls.Add(this.pbxProducto);
             this.Controls.Add(this.DGVProductos);
             this.Name = "MenuMarcas";
             this.Text = "MenuMarcas";
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVProductos)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,11 +306,22 @@
         private System.Windows.Forms.Button BTNAccesoProcductos;
         private System.Windows.Forms.ComboBox CBOFiltros;
         private System.Windows.Forms.TextBox TXBBusqueda;
-        private System.Windows.Forms.Button BTVerDetalle;
         private System.Windows.Forms.Button BTEliminar;
         private System.Windows.Forms.Button BTNModificar;
-        private System.Windows.Forms.Button BTAgregarA;
-        private System.Windows.Forms.PictureBox pbxProducto;
         private System.Windows.Forms.DataGridView DGVProductos;
+        private System.Windows.Forms.Button BTCancelar;
+        private System.Windows.Forms.Button BTAceptar;
+        private System.Windows.Forms.TextBox TBNombre;
+        private System.Windows.Forms.Label LBNombre;
+        private System.Windows.Forms.Label LBTitulo;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox TBNombre2;
+        private System.Windows.Forms.Button BTNCancelar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BTNAcepModificacion;
+        private System.Windows.Forms.Label LBNombre2;
+        private System.Windows.Forms.TextBox TBID;
+        private System.Windows.Forms.Label LBID;
     }
 }

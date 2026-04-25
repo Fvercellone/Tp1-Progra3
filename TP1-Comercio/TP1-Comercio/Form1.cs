@@ -137,7 +137,7 @@ namespace TP1_Comercio
             }
             else if (Filtro == "Marca" && TXBBusqueda.Text != "")
             {
-                listaFiltrada = listaProductos.FindAll(x => x.Marca.descripcion.ToUpper().Contains(TXBBusqueda.Text.ToUpper()));
+                listaFiltrada = listaProductos.FindAll(x => x.Marca.Nombre.ToUpper().Contains(TXBBusqueda.Text.ToUpper()));
             }
             else
             {
