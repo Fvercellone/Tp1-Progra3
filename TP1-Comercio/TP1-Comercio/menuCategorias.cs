@@ -15,6 +15,7 @@ namespace TP1_Comercio
 {
     public partial class menuCategorias : Form
     {
+
         public menuCategorias()
         {
             InitializeComponent();
@@ -197,7 +198,6 @@ namespace TP1_Comercio
                     MessageBox.Show("No se puede Modificar la Categoria porque hay productos asociados a ella.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-
                 TBNombre2.Text = Seleccionada.Nombre;
 
             }
@@ -215,6 +215,13 @@ namespace TP1_Comercio
                 Categoria Seleccionada = (Categoria)DGVProductos.CurrentRow.DataBoundItem;
                 ManejadorCategorias conexion = new ManejadorCategorias();
                 Seleccionada.Nombre = TBNombre2.Text;
+
+
+                if (ValidacionExisten(Seleccionada.Nombre) == true)
+                {
+                    MessageBox.Show("No se puede modificar la Categoría porque ya existe una con ese nombre.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 conexion.Modificar(Seleccionada);
 

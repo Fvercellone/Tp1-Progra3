@@ -35,3 +35,4 @@ C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comerc
 C:\Users\angel\OneDrive\Documentos\GitHub\Tp1-Progra3\TP1-Comercio\TP1-Comercio\obj\Debug\TP1_Comercio.MenuMarcas.resources
 C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\obj\Debug\TP1_Comercio.MenuMarcas.resources
 C:\Users\franc\OneDrive\Escritorio\TP Progra 3\TP-Progra3\Tp1-Progra3\TP1-Comercio\TP1-Comercio\obj\Debug\TP1_Comercio.menuCategorias.resources
+C:\Users\angel\OneDrive\Documentos\GitHub\Tp1-Progra3\TP1-Comercio\TP1-Comercio\obj\Debug\TP1_Comercio.menuCategorias.resources

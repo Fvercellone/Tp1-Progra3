@@ -235,6 +235,13 @@ namespace TP1_Comercio
                 ManejadorMarca conexion = new ManejadorMarca();
                 Seleccionada.Nombre = TBNombre2.Text;
 
+
+                if (ValidacionExisten(Seleccionada.Nombre) == true)
+                {
+                    MessageBox.Show("No se puede Modificar la marca porque ya existe una con ese Nombre.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 conexion.Modificar(Seleccionada);
 
                 MessageBox.Show("Marca modificada con éxito");
